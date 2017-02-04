@@ -26,3 +26,48 @@
     margin: 0 auto;
     width: 100%;
 }
+
+/*Demo button*/
+demo {
+    width: 100px;
+    margin:auto;
+}
+.btnDemo{
+    width:500px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 70px;
+    align-items: center;
+    border-radius: 10px;
+     margin-left: 400px;
+}
+.btnDemo a{
+    color: white;
+    text-decoration: none;
+}
+
+.green{
+    background-color: lightgreen;
+    
+    opacity: 0.5;
+}
+.green:hover{
+    background-color:palegreen;
+}
+
+.icon{
+   width:90px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0px;
+    margin: 10px;
+    align-items: center;
+    
+}
+.icon a{
+    color: lightgreen;
+    text-decoration: none;
+}
