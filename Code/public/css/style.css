@@ -39,7 +39,7 @@ demo {
     text-align: center;
     font-size: 70px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 30px;
      margin-left: 400px;
 }
 .btnDemo a{
@@ -70,4 +70,70 @@ demo {
 .icon a{
     color: lightgreen;
     text-decoration: none;
+}
+.logoRound{
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50px;
+    margin-left: -60px;
+    margin-bottom: -50px;
+}
+.logoRound a{
+    color: white;
+    text-decoration: none;
+}
+
+/*brand logos*/
+
+ brand {
+    width: 50px;
+    margin:auto;
+}
+.btnsmall{
+    width:70px;
+    height: 50px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 70px;
+    border-radius: 10px;
+    border-radius: 2px;
+}
+.btnsmall a{
+    color: white;
+    text-decoration: none;
+}
+.orange{
+    background-color:orange;
+}
+.orange:hover{
+    background-color:orangered;
+}
+.darkOrange{
+    background-color:orangered;
+}
+.darkOrange:hover{
+    background-color:darkorange;
+}
+.blue{
+    background-color:deepskyblue;
+}
+.darkblue:hover{
+    background-color:darkblue;
+}
+.darkblue{
+    background-color:blue;
+}
+.blue:hover{
+    background-color:dodgerblue;
+}
+.gray{
+    background-color: gray;
+    
+    opacity: 0.5;
+}
+.gray:hover{
+    background-color:lightgray;
 }
