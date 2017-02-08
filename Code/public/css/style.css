@@ -160,3 +160,7 @@ brand {
 .gray:hover {
     background-color: lightgray;
 }
+
+bg {
+    font-weight: bold;
+}
