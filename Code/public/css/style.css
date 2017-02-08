@@ -15,11 +15,13 @@
 
 .shadow {
     text-shadow: 2px 2px 5px;
+    position: absolute;
+    padding-inline-start: 5px;
+    left: 70px;
 }
 
 .box {
-    border: 1px solid grey;
-    background-color: grey;
+    background-color: lightblue;
 }
 
 .container-full {
@@ -27,37 +29,44 @@
     width: 100%;
 }
 
+
 /*Demo button*/
+
 demo {
     width: 100px;
-    margin:auto;
+    margin: auto;
 }
-.btnDemo{
-    width:500px;
+
+.btnDemo {
+    width: 500px;
     height: 100px;
     line-height: 100px;
     text-align: center;
     font-size: 70px;
     align-items: center;
     border-radius: 30px;
-     margin-left: 400px;
+    margin-left: 400px;
 }
-.btnDemo a{
+
+.btnDemo a {
     color: white;
     text-decoration: none;
 }
 
-.green{
+.green {
     background-color: lightgreen;
-    
     opacity: 0.5;
-}
-.green:hover{
-    background-color:palegreen;
+    position: relative;
+    left: 50px;
+    font-weight: bold;
 }
 
-.icon{
-   width:90px;
+.green:hover {
+    background-color: palegreen;
+}
+
+.icon {
+    width: 90px;
     height: 100px;
     line-height: 100px;
     text-align: center;
@@ -65,14 +74,15 @@ demo {
     margin-top: 0px;
     margin: 10px;
     align-items: center;
-    
 }
-.icon a{
+
+.icon a {
     color: lightgreen;
     text-decoration: none;
 }
-.logoRound{
-    width:50px;
+
+.logoRound {
+    width: 50px;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -81,19 +91,22 @@ demo {
     margin-left: -60px;
     margin-bottom: -50px;
 }
-.logoRound a{
+
+.logoRound a {
     color: white;
     text-decoration: none;
 }
 
+
 /*brand logos*/
 
- brand {
+brand {
     width: 50px;
-    margin:auto;
+    margin: auto;
 }
-.btnsmall{
-    width:70px;
+
+.btnsmall {
+    width: 70px;
     height: 50px;
     line-height: 100px;
     text-align: center;
@@ -101,39 +114,49 @@ demo {
     border-radius: 10px;
     border-radius: 2px;
 }
-.btnsmall a{
+
+.btnsmall a {
     color: white;
     text-decoration: none;
 }
-.orange{
-    background-color:orange;
+
+.orange {
+    background-color: orange;
 }
-.orange:hover{
-    background-color:orangered;
+
+.orange:hover {
+    background-color: orangered;
 }
-.darkOrange{
-    background-color:orangered;
+
+.darkOrange {
+    background-color: orangered;
 }
-.darkOrange:hover{
-    background-color:darkorange;
+
+.darkOrange:hover {
+    background-color: darkorange;
 }
-.blue{
-    background-color:deepskyblue;
+
+.blue {
+    background-color: deepskyblue;
 }
-.darkblue:hover{
-    background-color:darkblue;
+
+.darkblue:hover {
+    background-color: darkblue;
 }
-.darkblue{
-    background-color:blue;
+
+.darkblue {
+    background-color: blue;
 }
-.blue:hover{
-    background-color:dodgerblue;
+
+.blue:hover {
+    background-color: dodgerblue;
 }
-.gray{
+
+.gray {
     background-color: gray;
-    
     opacity: 0.5;
 }
-.gray:hover{
-    background-color:lightgray;
+
+.gray:hover {
+    background-color: lightgray;
 }
