@@ -53,16 +53,16 @@ demo {
     text-decoration: none;
 }
 
-.green {
-    background-color: lightgreen;
+.blue {
+    background-color: lightblue;
     opacity: 0.5;
     position: relative;
     left: 50px;
     font-weight: bold;
 }
 
-.green:hover {
-    background-color: palegreen;
+.blue:hover {
+    background-color: lightskyblue;
 }
 
 .icon {
