@@ -14,10 +14,12 @@
 }*/
 
 .shadow {
-    text-shadow: 2px 2px 5px;
+    text-shadow: 2px 2px lightblue;
     position: absolute;
     padding-inline-start: 5px;
     left: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
 }
 
 .box {
