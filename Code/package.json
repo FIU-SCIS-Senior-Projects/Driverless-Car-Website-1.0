@@ -2,9 +2,9 @@
   "name": "mean-app",
   "version": "1.0.0",
   "description": "Driveless Car API",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,8 +15,8 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "bower": "^1.8.0",
+    "ejs": "^2.5.5",
     "express": "^4.14.0",
-    "mongodb": "^2.2.22",
-    "mongoose": "^4.7.8"
+    "mongojs": "^2.4.0"
   }
 }
