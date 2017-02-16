@@ -4,8 +4,8 @@ var router = express.Router();
 
 //set routers
 
-router.get('/api/team', function(req,res,next){
-    res.send('This is the team page');
+router.get('/api/contactus', function(req,res,next){
+    res.send('This is the team contactus');
 });
 
 module.exports = router;

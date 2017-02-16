@@ -11,6 +11,7 @@ var aboutus = require('./routes/aboutus');
 var mission = require('./routes/mission');
 var team = require('./routes/team');
 var technology = require('./routes/technology');
+var contactus = require('./routes/contactus');
 
 //now we create our main app variable
 var app = express();
@@ -46,11 +47,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //now we create our routes by associating paths with route files defined abouve
 app.use('/', index);
-//app.use('/api',product);
-//app.use('/api',aboutus);
-//app.use('/api',mission);
-//app.use('/api',team);
-//app.use('/api',technology);
+app.use('/',product);
+app.use('/',aboutus);
+app.use('/',mission);
+app.use('/',team);
+app.use('/',technology);
+app.use('/',contactus);
 
 //the listen function takes a call back function
 var server = app.listen(app.get('port'), function() {
