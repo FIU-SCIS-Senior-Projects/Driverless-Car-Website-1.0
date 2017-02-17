@@ -168,13 +168,7 @@ bg {
 }
 
 .subscribeform {
-    border-radius: 15px 50px 30px;
-    border: solid indigo;
     background-color: ghostwhite;
-    background-image: url(http://www.sas.com/content/dam/SAS/en_us/image/sas-com/icons/navmenu/digital-experience-icon.png);
-    background-position: right bottom;
-    background-size: 100px 80px;
-    background-repeat: no-repeat;
 }
 
 h3 {

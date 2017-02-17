@@ -47,12 +47,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //now we create our routes by associating paths with route files defined abouve
 app.use('/', index);
-app.use('/',product);
-app.use('/',aboutus);
-app.use('/',mission);
-app.use('/',team);
-app.use('/',technology);
-app.use('/',contactus);
+app.use('/', product);
+app.use('/', aboutus);
+app.use('/', mission);
+app.use('/', team);
+app.use('/', technology);
+app.use('/', contactus);
+
+app.get('/*', function(req, res) {
+    res.render('404');
+})
 
 //the listen function takes a call back function
 var server = app.listen(app.get('port'), function() {
