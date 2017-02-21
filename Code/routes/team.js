@@ -4,7 +4,7 @@ var router = express.Router();
 
 //set routers
 
-router.get('/api/team', function(req,res,next){
+router.get('/team', function(req,res,next){
     res.send('This is the team page');
 });
 

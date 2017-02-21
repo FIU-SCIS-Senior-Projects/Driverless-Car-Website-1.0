@@ -4,7 +4,7 @@ var router = express.Router();
 
 //set routers
 
-router.get('/api/product', function(req,res,next){
+router.get('/product', function(req,res,next){
     res.send('This is the team product');
 });
 
