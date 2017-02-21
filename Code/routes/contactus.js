@@ -9,7 +9,7 @@ var router = express.Router();
 
 //set routers
 
-router.get('/api/contactus', function(req, res, next) {
+router.get('/contactus', function(req, res, next) {
     res.send('This is the team contactus');
 });
 

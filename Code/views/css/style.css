@@ -62,16 +62,24 @@ demo {
     margin-left: 500px;
 }
 .btn2{
-    width:150px;
-    height: 30px;
+    width:250px;
+    height: 70px;
     line-height: 50px;
-    text-align: center;
-    font-size: 50px;
+    font-size: 20px;
     border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white; 
+    font-weight: 300px;
 }
 .btn2 a{
     color: white;
     text-decoration: none;
+}
+.btn2:hover {
+    background-color:transparent;
+    opacity: 0.5;
 }
 .blue {
     background-color: lightblue;
@@ -159,6 +167,9 @@ brand {
 .blue {
     background-color: deepskyblue;
 }
+.blue:hover {
+    background-color: dodgerblue;
+}
 
 .darkblue:hover {
     background-color: darkblue;
@@ -168,13 +179,10 @@ brand {
     background-color: blue;
 }
 
-.blue:hover {
-    background-color: dodgerblue;
-}
-
 .gray {
     background-color: gray;
     opacity: 0.5;
+    border: blue;
 }
 
 .gray:hover {
