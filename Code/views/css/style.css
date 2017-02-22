@@ -13,6 +13,16 @@
     padding: 25px;
 }*/
 
+.navbar-brand {
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-fill-color: black;
+}
+
+.navbar {
+    background-color: white;
+}
+
 .shadow {
     text-shadow: 2px 2px lightblue;
     position: absolute;
@@ -58,11 +68,14 @@ demo {
 .position {
     position: absolute;
     width: 100%;
-    margin-top: -300px;
-    margin-left: 500px;
+    margin-top: -500px;
+    padding-right: 300px;
+    padding-left: 500px;
+    /*margin-left: 50px;*/
 }
-.btn2{
-    width:250px;
+
+.btn2 {
+    width: 250px;
     height: 70px;
     line-height: 50px;
     font-size: 20px;
@@ -70,17 +83,20 @@ demo {
     font-family: sans-serif;
     text-align: center;
     background-color: transparent;
-    border: 2px solid white; 
+    border: 2px solid white;
     font-weight: 300px;
 }
-.btn2 a{
+
+.btn2 a {
     color: white;
     text-decoration: none;
 }
+
 .btn2:hover {
-    background-color:transparent;
+    background-color: transparent;
     opacity: 0.5;
 }
+
 .blue {
     background-color: lightblue;
     opacity: 0.5;
@@ -167,6 +183,7 @@ brand {
 .blue {
     background-color: deepskyblue;
 }
+
 .blue:hover {
     background-color: dodgerblue;
 }

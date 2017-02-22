@@ -13,31 +13,31 @@ router.get('/contactus', function(req, res, next) {
     res.send('This is the team contactus');
 });
 
-router.post('/send', function(req, res, next) {
+router.post('contactus/send', function(req, res, next) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
             user: 'driverlesscarinfo@gmail.com',
-            pass: 'something'
+            pass: 'driverless'
         }
     });
+    var data = req.body;
     var mailOptions = {
-        from: 'John Doe <johndoe@outlook.com>', //sender address
+        from: data.name + ' &lt;' + data.email + '&gt;', //sender address
         to: 'driverlesscarinfo@gmail.com',
-        Subject: 'email example',
-        text: 'You have a new submission with following details..Name: ' + req.body.name + 'Email: ' + req.body.email + ' Message: ' + req.body.message,
-        html: '<p>You got a new submission with the following details</p><ul></li>Name: ' + req.body.name + '</li><li>Email: ' + req.body.email + '</li><li>Message: ' + req.body.message + '</li></ul>'
-
+        Subject: data.subject,
+        text: data.message
     };
 
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
             console.log(error);
-            res.redirect('/');
+            // res.redirect('/');
         } else {
             console.log("Message Sent:" + info.response);
-            res.redirect('/');
+            // res.redirect('/');
         }
+        res.json(mailoptions);
     });
 
 });
