@@ -1,0 +1,52 @@
+demo {
+    width: 100px;
+    margin: auto;
+}
+
+.btnDemo {
+    width: 500px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 70px;
+    align-items: center;
+    border-radius: 30px;
+    margin-left: 400px;
+}
+
+.btnDemo a {
+    color: white;
+    text-decoration: none;
+}
+
+.position {
+    position: absolute;
+    width: 100%;
+    margin-top: -500px;
+    padding-right: 300px;
+    padding-left: 500px;
+    /*margin-left: 50px;*/
+}
+
+.btn2 {
+    width: 250px;
+    height: 70px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: 300px;
+}
+
+.btn2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-color: transparent;
+    opacity: 0.5;
+}
