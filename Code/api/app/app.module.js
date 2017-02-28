@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
+var navbar_component_1 = require("./components/navbar/navbar.component");
 var video_component_1 = require("./components/backgroundvideo/video.component");
 var contact_component_1 = require("./components/contactus/contact.component");
 var footer_component_1 = require("./components/footer/footer.component");
@@ -22,7 +23,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes, { useHash: true }), forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, video_component_1.VidoeComponent],
+        declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, video_component_1.VideoComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

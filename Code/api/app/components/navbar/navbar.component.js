@@ -6,18 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var VideoComponent = (function () {
-    function VideoComponent() {
+var NavbarComponent = (function () {
+    function NavbarComponent() {
     }
-    return VideoComponent;
+    return NavbarComponent;
 }());
-VideoComponent = __decorate([
+NavbarComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'video-app',
-        templateUrl: 'video.component.html',
-        styleUrls: ['./video.component.css']
+        selector: 'navbar-app',
+        templateUrl: 'navbar.component.html'
     })
-], VideoComponent);
-exports.VideoComponent = VideoComponent;
-//# sourceMappingURL=video.component.js.map
+], NavbarComponent);
+exports.NavbarComponent = NavbarComponent;
+//# sourceMappingURL=navbar.component.js.map

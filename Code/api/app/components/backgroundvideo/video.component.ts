@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./video.component.css']
 })
 
-export class VidoeComponent { }
+export class VideoComponent {
+
+}
