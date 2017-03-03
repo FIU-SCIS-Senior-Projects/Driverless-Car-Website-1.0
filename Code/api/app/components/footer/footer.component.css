@@ -1,0 +1,191 @@
+footer .footer-blue-bg {
+    width: 100%;
+    float: left;
+    background: #0c3646;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer-blue-bg h2 {
+    font-family: 'MyanmarText';
+    font-size: 18px;
+    color: #FFF;
+    line-height: 22px;
+}
+
+.footer-link {
+    width: 20%;
+    margin: 0 0 20px 0;
+    display: block;
+}
+
+.footer-blue-bg .footer-subscribe {
+    width: 60%;
+}
+
+.footer-blue-bg .footer-subscribe {
+    width: 235px;
+    float: right;
+}
+
+.footer-blue-bg .footer-subscribe ul li {
+    width: 48%;
+}
+
+.footer-blue-bg .footer-subscribe ul li {
+    width: 100%;
+    float: left;
+    margin: 5px 0;
+}
+
+.footer-blue-bg .footer-subscribe input[type="text"] {
+    width: 100%;
+}
+
+input,
+select,
+textarea {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+input,
+textarea,
+keygen,
+select,
+button,
+meter,
+progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+
+.footer-blue-bg .footer-subscribe input[type="text"] {
+    width: 90%;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 4px 8px 7px;
+    font-family: 'OpenSans';
+    font-size: 13px;
+    color: #93d6f0;
+    border: 1px solid #878d9b;
+    background: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.tx {
+    font-family: 'OpenSansRegular';
+}
+
+.footer-bottom-bg {
+    width: 100%;
+    float: left;
+    background: #1e2635;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-bottom-bg .two-link {
+    float: right;
+    margin: 0;
+}
+
+footer .footer-blue-bg .footer-about-us {
+    float: left;
+}
+
+footer .follow-us-back ul li a.tw {
+    background: url(./app/tw-icn.png) no-repeat;
+}
+
+footer .follow-us-back ul li a.fb {
+    background: url(../images/fb-icn.png) no-repeat;
+}
+
+footer .follow-us-back ul li a.gplus {
+    background: url(../images/gplus-icn.png) no-repeat;
+}
+
+footer .follow-us-back ul li a.inst {
+    background: url(../images/inst-icn.png) no-repeat;
+}
+
+footer .follow-us-back ul li a {
+    width: 32px;
+    height: 32px;
+    background-position: 0 32px;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+footer .footer-bottom-bg p {
+    font-size: 13px;
+    color: #00aeed;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-bottom-bg .two-link a {
+    font-size: 13px;
+    color: #00aeed;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

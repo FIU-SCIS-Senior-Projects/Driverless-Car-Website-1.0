@@ -16,7 +16,32 @@ var brand_component_1 = require("./components/brands/brand.component");
 var contact_component_1 = require("./components/contactus/contact.component");
 var footer_component_1 = require("./components/footer/footer.component");
 var press_component_1 = require("./components/pressection/press.component");
-var routes = [];
+var routes = [
+    {
+        path: '',
+        component: navbar_component_1.NavbarComponent
+    },
+    {
+        path: 'about',
+        redirectTo: '/aboutus',
+        pathMatch: 'full'
+    },
+    {
+        path: 'product',
+        redirectTo: '/product',
+        pathMatch: 'full'
+    },
+    {
+        path: 'technology',
+        redirectTo: '/technology',
+        pathMatch: 'full'
+    },
+    {
+        path: 'contactus',
+        component: contact_component_1.ContactComponent,
+        pathMatch: 'full'
+    },
+];
 var AppModule = (function () {
     function AppModule() {
     }

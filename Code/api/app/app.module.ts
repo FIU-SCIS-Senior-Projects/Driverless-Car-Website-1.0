@@ -13,6 +13,40 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './components/pressection/press.component';
 
 const routes: Routes = [
+    {
+        path: '',
+        component: NavbarComponent
+
+    },
+
+    {
+        path: 'about',
+        redirectTo: '/aboutus',
+        pathMatch: 'full'
+    },
+    {
+        path: 'product',
+        redirectTo: '/product',
+        pathMatch: 'full'
+
+    }
+    ,
+    {
+        path: 'technology',
+        redirectTo: '/technology',
+        pathMatch: 'full'
+
+    }
+    ,
+    {
+        path: 'contactus',
+        component: ContactComponent,
+        pathMatch: 'full'
+
+    },
+    // { path: '**', component: PageNotFoundComponent }
+
+
 
 ];
 
@@ -20,5 +54,6 @@ const routes: Routes = [
     imports: [BrowserModule, RouterModule.forRoot(routes, { useHash: true }), FormsModule, ReactiveFormsModule],
     declarations: [AppComponent, NavbarComponent, BrandComponent, ContactComponent, FooterComponent, VideoComponent, PressComponent],
     bootstrap: [AppComponent]
+
 })
 export class AppModule { }

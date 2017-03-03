@@ -7,17 +7,20 @@
                     <span class = "icon-bar"></span>
                     <span class = "icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="#">{{title}}</a>
+            <a class="navbar-brand" href="#">{{title}}</a><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/3d-glossy-blue-orbs-icons-transport-travel/036354-3d-glossy-blue-orb-icon-transport-travel-transportation-car2.png"
+                alt="driverlesscar">
         </div>
         <div class="collapse navbar-collapse" id="bs=example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
-                <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="about">About us</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="product">Product</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="technology">Technology</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="contactus">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="" routerLinkActive="active" style="font-size: 18px;  font-family: 'Aller';">Home</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 18px;  font-family: 'Aller';" routerLink="/about">About us</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 18px;  font-family: 'Aller';" routerLink="/product">Product</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 18px;  font-family: 'Aller';" routerLink="/technology">Technology</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 18px;  font-family: 'Aller';" routerLink="blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 18px;  font-family: 'Aller';" routerLink="contactus">Contact us</a></li>
 
             </ul>
         </div>
     </div>
 </nav>
+<router-outlet></router-outlet>
