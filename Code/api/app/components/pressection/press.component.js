@@ -15,7 +15,8 @@ PressComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'press-app',
-        templateUrl: 'press.component.html'
+        templateUrl: 'press.component.html',
+        styleUrls: ['press.component.css']
     })
 ], PressComponent);
 exports.PressComponent = PressComponent;

@@ -10,7 +10,7 @@ var router = express.Router();
 //set routers
 
 router.get('/contactus', function(req, res, next) {
-    res.send('This is the team contactus');
+    res.send('This is the contact us page');
 });
 
 router.post('contactus/send', function(req, res, next) {

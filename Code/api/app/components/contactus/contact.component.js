@@ -26,6 +26,7 @@ ContactComponent = __decorate([
         moduleId: module.id,
         selector: 'contact-us',
         templateUrl: 'contact.component.html',
+        styleUrls: ['contact.component.css'],
         styles: ["\n    input-ng-invalid {broder-left: 5px solid red;}\n    input-ng-valid {broder-left: 5px solid green;}"]
     })
 ], ContactComponent);
