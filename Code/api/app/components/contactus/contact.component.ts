@@ -5,7 +5,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
     moduleId: module.id,
     selector: 'contact-us',
     templateUrl: 'contact.component.html',
-    styleUrls: ['brand.component.css'],
+    styleUrls: ['contact.component.css'],
     styles: [`
     input-ng-invalid {broder-left: 5px solid red;}
     input-ng-valid {broder-left: 5px solid green;}`]
