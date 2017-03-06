@@ -16,6 +16,7 @@ var brand_component_1 = require("./components/brands/brand.component");
 var contact_component_1 = require("./components/contactus/contact.component");
 var footer_component_1 = require("./components/footer/footer.component");
 var press_component_1 = require("./components/pressection/press.component");
+var blog_component_1 = require("./components/blog/blog.component");
 var routes = [
     {
         path: '',
@@ -36,6 +37,12 @@ var routes = [
         redirectTo: '/technology',
         pathMatch: 'full'
     },
+     {
+        path: 'blog',
+        component: blog_component_1.BlogComponent
+        //redirectTo: '/blog',
+        //pathMatch: 'full'
+    },
     {
         path: 'contactus',
         component: contact_component_1.ContactComponent,
@@ -50,7 +57,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes, { useHash: true }), forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, video_component_1.VideoComponent, press_component_1.PressComponent],
+        declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, video_component_1.VideoComponent, press_component_1.PressComponent,blog_component_1.BlogComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
