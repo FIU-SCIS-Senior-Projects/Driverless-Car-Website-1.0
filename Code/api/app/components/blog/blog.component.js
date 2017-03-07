@@ -21,7 +21,6 @@ var BlogComponent = (function () {
     };
     return BlogComponent;
 }());
-
 BlogComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
@@ -32,3 +31,4 @@ BlogComponent = __decorate([
     })
 ], BlogComponent);
 exports.BlogComponent = BlogComponent;
+//# sourceMappingURL=blog.component.js.map

@@ -7,48 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var router_1 = require("@angular/router");
-var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var navbar_component_1 = require("./components/navbar/navbar.component");
-var video_component_1 = require("./components/backgroundvideo/video.component");
-var brand_component_1 = require("./components/brands/brand.component");
-var contact_component_1 = require("./components/contactus/contact.component");
-var footer_component_1 = require("./components/footer/footer.component");
-var press_component_1 = require("./components/pressection/press.component");
-var blog_component_1 = require("./components/blog/blog.component");
-var routes = [
-    {
-        path: '',
-        component: navbar_component_1.NavbarComponent
-    },
-    {
-        path: 'about',
-        redirectTo: '/aboutus',
-        pathMatch: 'full'
-    },
-    {
-        path: 'product',
-        redirectTo: '/product',
-        pathMatch: 'full'
-    },
-    {
-        path: 'technology',
-        redirectTo: '/technology',
-        pathMatch: 'full'
-    },
-     {
-        path: 'blog',
-        component: blog_component_1.BlogComponent
-        //redirectTo: '/blog',
-        //pathMatch: 'full'
-    },
-    {
-        path: 'contactus',
-        component: contact_component_1.ContactComponent,
-        pathMatch: 'full'
-    },
-];
+var app_routing_1 = require("./app.routing");
+var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -56,8 +18,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes, { useHash: true }), forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, video_component_1.VideoComponent, press_component_1.PressComponent,blog_component_1.BlogComponent],
+        imports: [platform_browser_1.BrowserModule, app_routing_1.AppRoutingModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, http_1.HttpModule],
+        declarations: [app_component_1.AppComponent, app_routing_1.routingComponents],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

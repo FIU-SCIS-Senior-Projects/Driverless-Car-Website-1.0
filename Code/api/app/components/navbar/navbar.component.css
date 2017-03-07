@@ -16,9 +16,9 @@
 }
 
 .navbar-brand {
-    font-family: 'Aller';
+    font-family: 'museo_300', helvetica, arial, sans-serif;
     font-size: 30px;
-    line-height: 20px;
+    line-height: 30px;
     color: #FFF;
 }
 

@@ -41,10 +41,10 @@ export const routes: Routes = [
         pathMatch: 'full'
 
     },
-    {   
-        path: 'blog', 
+    {
+        path: 'blog',
         component: BlogComponent,
-        redirectTo: '/blog',
+
          pathMatch: 'full'
     }
 
