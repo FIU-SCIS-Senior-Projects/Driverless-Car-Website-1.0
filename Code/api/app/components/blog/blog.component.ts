@@ -15,7 +15,8 @@ export class BlogComponent {
  blogForm = new FormGroup({
         title: new FormControl(),
         content: new FormControl(),
-         author: new FormControl()
+         author: new FormControl(),
+         image: new FormControl()
     });
 
     onSubmit() {

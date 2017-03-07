@@ -12,7 +12,8 @@ var BlogComponent = (function () {
         this.blogForm = new forms_1.FormGroup({
             title: new forms_1.FormControl(),
             content: new forms_1.FormControl(),
-            author: new forms_1.FormControl()
+            author: new forms_1.FormControl(),
+            image: new forms_1.FormControl()
         });
     }
     BlogComponent.prototype.onSubmit = function () {
