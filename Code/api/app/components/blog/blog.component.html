@@ -1,39 +1,43 @@
-<navbar-app></navbar-app>
 
-<br><br><br><br><br><br><br><br><br><br>
-
-
-<div class="container-fluid">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="form-area">
-                <br>
-                <div class="section-title">New Post</div>
-                <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" accept="image/gif, image/jpeg">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" type="textarea" id="content" name="content" placeholder="Your post here" maxlength="140" rows="7"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="author" name="author" placeholder="Author" required>
-                    </div>
-
-                    <input type="file" id="image" name="image" required>
-
-                    <div class=text-center>
-                        <button type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
-                    </div>
-                    <div class=text-center>
-                        <button type="reset" id="reset" name="reset" class="btn btn-primary">Reset</button>
-                    </div>
-                    <div class=text-center>
-                        <button type="button" id="preview" name="preview" class="btn btn-primary">Preview Post</button>
-                    </div>
-                </form>
-
-            </div>
+<section class="page-title parallax">
+       
+       <div class="row-parallax-bg">
+        <div class="parallax-wrapper">
+          <div class="parallax-bg-element" style="background-image: url(staticmapbg.png);"></div>
         </div>
-    </div>
-</div>
+      </div>
+
+       <div class="parallax-overlay">
+         <div class="centrize">
+           <div class="v-center">
+             <div class="container">
+               <div class="title center">
+                 <div class="section-title"><h1>Driverless Cars Blog<span class="red-dot"></span></h1></div>
+                         <div class="container container--small">
+                            <div class="sub-section-title">Here you&#039;ll find some great tutorials and tips about driverless cars! </div>
+                            <br>
+                         </div>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+</section>
+<div>
+
+<br>
+<div class="middle-division">
+
+  <div class="section-title">Why diverless cars?</div>
+      
+      <img src="staticmapbg.png" width=100%>
+      <div style="text-align: justify;">
+        Driverless cars are designed to have almost a superhuman-like ability to recognize the world around them. This is because they use loads of sensors to gather tons of data about their environment so that they can seamlessly operate in a constantly changing environment.
+
+
+      </div>
+      <h2 style="text-align:right; ">
+        <a  style="text-decoration:none; font-family:Roboto" href="">Read More...</a>
+      </h2>
+      <hr/>
+</div>   
