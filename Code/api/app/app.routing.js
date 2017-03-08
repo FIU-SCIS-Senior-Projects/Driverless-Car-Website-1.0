@@ -15,10 +15,12 @@ var contact_component_1 = require("./components/contactus/contact.component");
 var footer_component_1 = require("./components/footer/footer.component");
 var press_component_1 = require("./components/pressection/press.component");
 var blog_component_1 = require("./components/blog/blog.component");
+var home_component_1 = require("./components/homecomponent/home.component");
 exports.routes = [
     {
         path: '',
-        component: navbar_component_1.NavbarComponent
+        component: home_component_1.HomeComponent,
+        pathMatch: 'full'
     },
     {
         path: 'about',
@@ -58,5 +60,5 @@ AppRoutingModule = __decorate([
     })
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
-exports.routingComponents = [app_component_1.AppComponent, navbar_component_1.NavbarComponent, video_component_1.VideoComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent];
+exports.routingComponents = [app_component_1.AppComponent, home_component_1.HomeComponent, navbar_component_1.NavbarComponent, video_component_1.VideoComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent, footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent];
 //# sourceMappingURL=app.routing.js.map

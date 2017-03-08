@@ -7,21 +7,21 @@
     <div class="container">
         <div class="col-md-12">
             <div class="form-area">
-                    <br>
+                <br>
                 <div class="section-title">New Post</div>
-                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" accept="image/gif, image/jpeg">
+                <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" accept="image/gif, image/jpeg">
                     <div class="form-group">
                         <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
                     </div>
                     <div class="form-group">
                         <textarea class="form-control" type="textarea" id="content" name="content" placeholder="Your post here" maxlength="140" rows="7"></textarea>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <input type="text" class="form-control" id="author" name="author" placeholder="Author" required>
                     </div>
 
-                        <input type="file" id="image" name="image" required>
-    
+                    <input type="file" id="image" name="image" required>
+
                     <div class=text-center>
                         <button type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
                     </div>
@@ -29,7 +29,7 @@
                         <button type="reset" id="reset" name="reset" class="btn btn-primary">Reset</button>
                     </div>
                     <div class=text-center>
-                        <button type="button" id="preview" name="preview" class="btn btn-primary" >Preview Post</button>
+                        <button type="button" id="preview" name="preview" class="btn btn-primary">Preview Post</button>
                     </div>
                 </form>
 
@@ -37,5 +37,3 @@
         </div>
     </div>
 </div>
-
-<footer-app></footer-app>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ModuleWithProviders} from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,11 +10,12 @@ import { ContactComponent } from './components/contactus/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './components/pressection/press.component';
 import { BlogComponent } from './components/blog/blog.component';
-
+import { HomeComponent } from './components/homecomponent/home.component';
 export const routes: Routes = [
     {
         path: '',
-        component: NavbarComponent
+        component: HomeComponent,
+        pathMatch: 'full'
 
     },
     {
@@ -45,16 +46,16 @@ export const routes: Routes = [
         path: 'blog',
         component: BlogComponent,
 
-         pathMatch: 'full'
+        pathMatch: 'full'
     }
 
 ];
 
- @NgModule({
+@NgModule({
     imports: [RouterModule.forRoot(routes)],
-     exports:[RouterModule]
+    exports: [RouterModule]
 
- })
+})
 export class AppRoutingModule { }
 
-export const routingComponents = [AppComponent, NavbarComponent, VideoComponent, BrandComponent,ContactComponent, FooterComponent, PressComponent, BlogComponent]
+export const routingComponents = [AppComponent, HomeComponent, NavbarComponent, VideoComponent, BrandComponent, ContactComponent, FooterComponent, PressComponent, BlogComponent]
