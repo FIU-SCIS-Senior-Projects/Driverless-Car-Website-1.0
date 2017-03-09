@@ -11,6 +11,7 @@ var mission = require('./routes/mission');
 var team = require('./routes/team');
 var technology = require('./routes/technology');
 var contactus = require('./routes/contactus');
+var blog = require('./routes/blog');
 
 //now we create our main
 var app = express();
@@ -47,6 +48,7 @@ app.use('/', mission);
 app.use('/', team);
 app.use('/', technology);
 app.use('/', contactus);
+app.use('/', blog);
 
 // app.get('/*', function(req, res) {
 //     res.render('404');

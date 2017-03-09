@@ -11,6 +11,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PressComponent } from './components/pressection/press.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { HomeComponent } from './components/homecomponent/home.component';
+import { ProductComponent } from './components/products/prod.component';
+import { AboutComponent } from './components/aboutus/about.component';
+import { TechComponent } from './components/Technology/tech.component';
+
 export const routes: Routes = [
     {
         path: '',
@@ -20,19 +24,19 @@ export const routes: Routes = [
     },
     {
         path: 'about',
-        redirectTo: '/aboutus',
+        component: AboutComponent,
         pathMatch: 'full'
     },
     {
         path: 'product',
-        redirectTo: '/product',
+        component: ProductComponent,
         pathMatch: 'full'
 
     }
     ,
     {
         path: 'technology',
-        redirectTo: '/technology',
+        component: TechComponent,
         pathMatch: 'full'
 
     },
@@ -45,7 +49,6 @@ export const routes: Routes = [
     {
         path: 'blog',
         component: BlogComponent,
-
         pathMatch: 'full'
     }
 
@@ -58,4 +61,6 @@ export const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [AppComponent, HomeComponent, NavbarComponent, VideoComponent, BrandComponent, ContactComponent, FooterComponent, PressComponent, BlogComponent]
+export const routingComponents = [AppComponent, HomeComponent,
+    NavbarComponent, VideoComponent, BrandComponent, ContactComponent,
+    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent]

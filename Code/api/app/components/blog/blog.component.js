@@ -9,6 +9,8 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var BlogComponent = (function () {
     function BlogComponent() {
+        this.model = {};
+        this.loading = false;
         this.blogForm = new forms_1.FormGroup({
             title: new forms_1.FormControl(),
             content: new forms_1.FormControl(),
@@ -18,6 +20,9 @@ var BlogComponent = (function () {
     }
     BlogComponent.prototype.onSubmit = function () {
         console.log(this.blogForm.value);
+    };
+    BlogComponent.prototype.login = function () {
+        console.log('Hai');
     };
     return BlogComponent;
 }());

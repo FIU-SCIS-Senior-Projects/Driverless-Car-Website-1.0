@@ -12,14 +12,27 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class BlogComponent {
- blogForm = new FormGroup({
+
+    model: any = {};
+    loading = false;
+    returnUrl: string;
+
+    blogForm = new FormGroup({
         title: new FormControl(),
         content: new FormControl(),
-         author: new FormControl(),
-         image: new FormControl()
+        author: new FormControl(),
+        image: new FormControl()
     });
+
+
+
+
 
     onSubmit() {
         console.log(this.blogForm.value);
+    }
+
+    login() {
+        console.log('Hai');
     }
 }
