@@ -9,27 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var admin_service_1 = require("./admin.service");
+var router_1 = require("@angular/router");
 var AdminComponent = (function () {
-    function AdminComponent(_service) {
-        this._service = _service;
-        this.user = new admin_service_1.User('', '');
-        this.errorMsg = '';
+    function AdminComponent(route, router) {
+        this.route = route;
+        this.router = router;
+        this.model = {};
+        this.loading = false;
     }
+    AdminComponent.prototype.ngOnInit = function () {
+        // this.authenticationService.logout();
+        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    };
     AdminComponent.prototype.login = function () {
-        if (!this._service.login(this.user)) {
-            this.errorMsg = 'Failed to login';
-        }
+        // this.loading = true;
+        // this.authenticationService.login(this.model.username, this.model.password)
+        //     .subscribe(
+        //     data => {
+        //         this.router.navigate([this.returnUrl]);
+        //     },
+        //     error => {
+        //         this.alertService.error(error);
+        //         this.loading = false;
+        // });
     };
     return AdminComponent;
 }());
 AdminComponent = __decorate([
     core_1.Component({
-        selector: 'admin-login',
-        providers: [admin_service_1.AuthenticationService],
+        moduleId: module.id,
+        // selector: 'admin-login',
         templateUrl: 'admin.component.html'
     }),
-    __metadata("design:paramtypes", [admin_service_1.AuthenticationService])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router])
 ], AdminComponent);
 exports.AdminComponent = AdminComponent;
 //# sourceMappingURL=admin.component.js.map

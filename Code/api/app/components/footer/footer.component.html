@@ -74,6 +74,10 @@
             <div class="two-link">
                 <a href="">Privacy Policy</a>
                 <a href="">Terms and Conditions</a>
+
+                <button type="button" *ngIf="_router.url.includes('blog')" (click)="redirect()">AdminLogin</button>
+
+
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'footer-app',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['footer.component.css']
 })
 
-export class FooterComponent { }
+export class FooterComponent {
+    public location = '';
+
+    constructor(private _router: Router) {
+        this.location = _router.url;
+    }
+
+    redirect() {
+        this._router.navigate(['/blog/login']);
+    }
+}

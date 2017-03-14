@@ -2,16 +2,20 @@
 var express = require('express');
 
 var path = require('path');
+var passport = require('passport');
+var morgan = require('morgan');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var flash = require('connect-flash');
 
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var product = require('./routes/product');
 var aboutus = require('./routes/aboutus');
-var mission = require('./routes/mission');
-var team = require('./routes/team');
 var technology = require('./routes/technology');
 var contactus = require('./routes/contactus');
 var blog = require('./routes/blog');
+var admin = require('./routes/admin')
 
 //now we create our main
 var app = express();
@@ -35,20 +39,25 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'api')));
 
 //this section sets the Body Parser Middleware
+app.use(morgan('dev'));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(session({ secret: 'ilovedriverlesscar' }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 //now we create our routes by associating paths with route files defined abouve
 app.use('/', index);
 app.use('/', product);
 app.use('/', aboutus);
-app.use('/', mission);
-app.use('/', team);
 app.use('/', technology);
 app.use('/', contactus);
 app.use('/', blog);
+app.use('/', admin);
 
 // app.get('/*', function(req, res) {
 //     res.render('404');

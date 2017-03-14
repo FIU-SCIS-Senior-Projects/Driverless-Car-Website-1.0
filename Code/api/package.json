@@ -1,5 +1,5 @@
 {
-    "name": "mytasklist",
+    "name": "driverlesscar",
     "version": "1.0.0",
     "scripts": {
         "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
@@ -30,6 +30,8 @@
     },
     "devDependencies": {
         "concurrently": "^3.0.0",
+        "jasmine": "^2.5.3",
+        "karma": "^1.5.0",
         "lite-server": "^2.2.2",
         "typescript": "^2.0.3",
         "typings": "^1.4.0"

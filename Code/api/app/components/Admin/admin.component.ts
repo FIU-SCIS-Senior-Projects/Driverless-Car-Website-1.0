@@ -1,23 +1,40 @@
-import { Component, ElementRef } from '@angular/core';
-import { AuthenticationService, User } from './admin.service';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'admin-login',
-    providers: [AuthenticationService],
+    moduleId: module.id,
+    // selector: 'admin-login',
     templateUrl: 'admin.component.html'
 })
 
-export class AdminComponent {
+export class AdminComponent implements OnInit {
+    model: any = {};
+    loading = false;
+    returnUrl: string;
 
-    public user = new User('', '');
-    public errorMsg = '';
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+        // private authenticationService: AuthenticationService,
+        // private alertService: AlertService
 
-    constructor(private _service: AuthenticationService) { }
+    ) { }
 
-    login() {
-        if (!this._service.login(this.user)) {
-            this.errorMsg = 'Failed to login';
-        }
+    ngOnInit() {
+        // this.authenticationService.logout();
+        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
+    login() {
+        // this.loading = true;
+        // this.authenticationService.login(this.model.username, this.model.password)
+        //     .subscribe(
+        //     data => {
+        //         this.router.navigate([this.returnUrl]);
+        //     },
+        //     error => {
+        //         this.alertService.error(error);
+        //         this.loading = false;
+        // });
+    }
 }

@@ -19,6 +19,7 @@ var home_component_1 = require("./components/homecomponent/home.component");
 var prod_component_1 = require("./components/products/prod.component");
 var about_component_1 = require("./components/aboutus/about.component");
 var tech_component_1 = require("./components/Technology/tech.component");
+var admin_component_1 = require("./components/Admin/admin.component");
 exports.routes = [
     {
         path: '',
@@ -49,6 +50,11 @@ exports.routes = [
         path: 'blog',
         component: blog_component_1.BlogComponent,
         pathMatch: 'full'
+    },
+    {
+        path: 'blog/login',
+        component: admin_component_1.AdminComponent,
+        pathMatch: 'full'
     }
 ];
 var AppRoutingModule = (function () {
@@ -65,5 +71,5 @@ AppRoutingModule = __decorate([
 exports.AppRoutingModule = AppRoutingModule;
 exports.routingComponents = [app_component_1.AppComponent, home_component_1.HomeComponent,
     navbar_component_1.NavbarComponent, video_component_1.VideoComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent,
-    footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent, prod_component_1.ProductComponent, about_component_1.AboutComponent, tech_component_1.TechComponent];
+    footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent, prod_component_1.ProductComponent, about_component_1.AboutComponent, tech_component_1.TechComponent, admin_component_1.AdminComponent];
 //# sourceMappingURL=app.routing.js.map
