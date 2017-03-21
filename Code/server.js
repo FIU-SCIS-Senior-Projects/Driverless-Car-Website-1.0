@@ -60,7 +60,7 @@ app.use('/', product);
 app.use('/', aboutus);
 app.use('/', technology);
 app.use('/', contactus);
-app.use('/api', blog);
+app.use('/', blog);
 //app.use('/',subscribe);
 app.use('/', admin);
 

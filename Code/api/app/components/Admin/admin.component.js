@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var AdminComponent = (function () {
@@ -46,26 +47,3 @@ AdminComponent = __decorate([
 ], AdminComponent);
 exports.AdminComponent = AdminComponent;
 //# sourceMappingURL=admin.component.js.map
-
-
-// var mongoose = require('mongoose');
-// var bcrypt = require('bcrypt-nodejs');
-
-// var userSchema = mongoose.Schema({
-//     email: {
-//         type: String,
-//         required: true,
-//         unique: true
-//     },
-//     password: String
-// });
-
-// userSchema.methods.generateHash = function(password) {
-//     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-// };
-
-// userSchema.methods.validPassword = function(password) {
-//     return bcrypt.compareSync(password, this.password);
-// };
-
-// module.exports = mongoose.model('User', userSchema);

@@ -13,10 +13,12 @@ router.get('/blog', function(req,res,next){
             res.send(err);
         }
         res.json(blogs);
-        //res.render('index.html');
         
     });
 });
+// router.get('/blog', function(req,res,next){
+//     res.render('index.html');
+// });
 
 //get single blog
 router.get('/blog/:id', function(req,res,next){
