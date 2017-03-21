@@ -1,3 +1,4 @@
 {
-    "directory": "views/libs"
+    // "directory": "views/libs"
+    "directory": "api/bower_components"
 }

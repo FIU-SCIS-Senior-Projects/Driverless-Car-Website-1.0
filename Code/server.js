@@ -15,6 +15,9 @@ var aboutus = require('./routes/aboutus');
 var technology = require('./routes/technology');
 var contactus = require('./routes/contactus');
 var blog = require('./routes/blog');
+var subscribe = require('./routes/subscribe');
+//var favicon = require('serve-favicon');
+
 var admin = require('./routes/admin')
 
 //now we create our main
@@ -46,6 +49,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+
 app.use(session({ secret: 'ilovedriverlesscar' }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -56,7 +60,8 @@ app.use('/', product);
 app.use('/', aboutus);
 app.use('/', technology);
 app.use('/', contactus);
-app.use('/', blog);
+app.use('/api', blog);
+//app.use('/',subscribe);
 app.use('/', admin);
 
 // app.get('/*', function(req, res) {

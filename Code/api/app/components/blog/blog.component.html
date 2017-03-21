@@ -1,4 +1,95 @@
+
 <section class="page-title parallax">
+
+    <div class="row-parallax-bg">
+        <div class="parallax-wrapper">
+            <div class="parallax-bg-element" style="background-image: url(images/staticmapbg.png);"></div>
+        </div>
+    </div>
+
+    <div class="parallax-overlay">
+        <div class="centrize">
+            <div class="v-center">
+                <div class="container">
+                    <div class="title center">
+                        <div class="section-title">
+                            <h1>Driverless Cars Blog<span class="red-dot"></span></h1>
+                        </div>
+                        <div class="container container--small">
+                            <div class="sub-section-title">Here you&#039;ll find some great tutorials and tips about driverless cars! </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<br><br>
+<div class="middle-division">
+
+    <div *ngFor = "let blog of blogs">
+
+        <div class="section-title">{{blog.title}}</div>
+
+        <img src="images/car.jpg" width=100%>
+        <div style="text-align: justify;">
+            {{blog.content}}
+        </div>
+        <h2 style="text-align:right; ">
+            <a style="text-decoration:none; font-family:Roboto" href="">Read More...</a>
+        </h2>
+        <hr/>
+
+    </div>
+</div>
+
+
+
+<!--<form class="well" >
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Add Task...">    
+      </div>  
+</form>
+
+<div class="task-list">
+    <div *ngFor = "let blog of blogs">
+        <div class="col-md-1">
+            <input type="checkbox" >
+        </div>
+        <div class="col-md-7">
+            {{blog.title}}
+        </div> 
+        <div class="col-md-4">
+            <input type="button" value="Delete" class="btn btn-danger">    
+        </div>
+    </div>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<section class="page-title parallax">
 
     <div class="row-parallax-bg">
         <div class="parallax-wrapper">
@@ -63,4 +154,4 @@
     <hr/>
 
 
-</div>
+</div>-->
