@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var index_1 = require("../_services/index");
 var AdminComponent = (function () {
+    //error = '';
     function AdminComponent(route, router, authenticationService, alertService) {
         this.route = route;
         this.router = router;
@@ -32,9 +33,10 @@ var AdminComponent = (function () {
         this.loading = true;
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(function (data) {
-            _this.router.navigate(['/blog']);
+            _this.router.navigate(['/blog/newblog']);
         }, function (error) {
-            _this.alertService.error(error._body);
+            //this.error = 'Username or password is incorrect';
+            _this.alertService.error(error);
             _this.loading = false;
         });
     };

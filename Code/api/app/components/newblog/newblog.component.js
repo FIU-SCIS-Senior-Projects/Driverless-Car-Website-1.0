@@ -11,10 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("../../services/blog.service");
+//import { Router } from '@angular/router';
+var router_1 = require("@angular/router");
 var NewBlogComponent = (function () {
-    function NewBlogComponent(blogService) {
+    function NewBlogComponent(blogService, route, router) {
         var _this = this;
         this.blogService = blogService;
+        this.route = route;
+        this.router = router;
         this.blogService.getBlog()
             .subscribe(function (blogs) {
             _this.blogs = blogs;
@@ -32,6 +36,7 @@ var NewBlogComponent = (function () {
             _this.blogs.push(blog);
             _this.title = '';
             _this.content = '';
+            _this.router.navigate(['/blog']);
         });
     };
     return NewBlogComponent;
@@ -44,7 +49,8 @@ NewBlogComponent = __decorate([
         styleUrls: ['newblog.component.css'],
         providers: [blog_service_1.BlogService]
     }),
-    __metadata("design:paramtypes", [blog_service_1.BlogService])
+    __metadata("design:paramtypes", [blog_service_1.BlogService, router_1.ActivatedRoute,
+        router_1.Router])
 ], NewBlogComponent);
 exports.NewBlogComponent = NewBlogComponent;
 //# sourceMappingURL=newblog.component.js.map

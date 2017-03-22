@@ -12,7 +12,7 @@ export class AdminComponent implements OnInit {
     model: any = {};
     loading = false;
     returnUrl: string;
-
+    //error = '';
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -32,10 +32,11 @@ export class AdminComponent implements OnInit {
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(
             data => {
-                this.router.navigate(['/blog']);
+                this.router.navigate(['/blog/newblog']);
             },
             error => {
-                this.alertService.error(error._body);
+                //this.error = 'Username or password is incorrect';
+                this.alertService.error(error);
                 this.loading = false;
             });
     }

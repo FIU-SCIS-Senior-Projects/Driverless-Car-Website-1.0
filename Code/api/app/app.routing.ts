@@ -68,7 +68,7 @@ export const routes: Routes = [
     {
         path: 'blog/newblog',
         component: NewBlogComponent,
-        pathMatch: 'full'
+        canActivate: [AuthGuard]
     },
 
 ];

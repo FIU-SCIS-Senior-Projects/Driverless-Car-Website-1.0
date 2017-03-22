@@ -15,21 +15,25 @@ var HComponent = (function () {
     function HComponent(userService) {
         this.userService = userService;
         this.users = [];
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
     HComponent.prototype.ngOnInit = function () {
+        this.loadAllUsers();
+    };
+    HComponent.prototype.deleteUser = function (_id) {
         var _this = this;
-        // get users from secure api end point
-        this.userService.getUsers()
-            .subscribe(function (users) {
-            _this.users = users;
-        });
+        this.userService.delete(_id).subscribe(function () { _this.loadAllUsers(); });
+    };
+    HComponent.prototype.loadAllUsers = function () {
+        var _this = this;
+        this.userService.getAll().subscribe(function (users) { _this.users = users; });
     };
     return HComponent;
 }());
 HComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        templateUrl: 'h.component.html',
+        templateUrl: 'h.component.html'
     }),
     __metadata("design:paramtypes", [index_1.UserService])
 ], HComponent);
