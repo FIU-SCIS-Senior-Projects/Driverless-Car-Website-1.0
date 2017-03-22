@@ -15,6 +15,7 @@ import { ProductComponent } from './components/products/prod.component';
 import { AboutComponent } from './components/aboutus/about.component';
 import { TechComponent } from './components/Technology/tech.component';
 import { AdminComponent } from './components/Admin/admin.component';
+import { NewBlogComponent } from './components/newblog/newblog.component';
 
 export const routes: Routes = [
     {
@@ -56,7 +57,12 @@ export const routes: Routes = [
         path: 'blog/login',
         component: AdminComponent,
         pathMatch: 'full'
-    }
+    }, 
+    {
+        path: 'blog/newblog',
+        component: NewBlogComponent,
+        pathMatch: 'full'
+    },
 
 ];
 
@@ -69,4 +75,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [AppComponent, HomeComponent,
     NavbarComponent, VideoComponent, BrandComponent, ContactComponent,
-    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent]
+    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent,NewBlogComponent]

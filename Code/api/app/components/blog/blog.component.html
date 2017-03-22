@@ -24,15 +24,19 @@
             </div>
         </div>
     </div>
-
 </section>
 
+<!--Add blog button begins-->
+<br><br>
+        <div class="md-pull-right">
+            <button type="button" (click)="redirect()">Add New post</button>
+        </div>
+
+<!--Add blog button begins-->
 
 <br><br>
-<div class="middle-division">
-
-    <div *ngFor = "let blog of blogs">
-
+<div *ngFor = "let blog of blogs">
+    <div class="middle-division">
         <div class="section-title">{{blog.title}}</div>
 
         <img src="images/car.jpg" width=100%>

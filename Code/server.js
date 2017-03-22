@@ -15,6 +15,7 @@ var aboutus = require('./routes/aboutus');
 var technology = require('./routes/technology');
 var contactus = require('./routes/contactus');
 var blog = require('./routes/blog');
+var newblog = require('./routes/newblog');
 var subscribe = require('./routes/subscribe');
 //var favicon = require('serve-favicon');
 
@@ -62,11 +63,8 @@ app.use('/', technology);
 app.use('/', contactus);
 app.use('/', blog);
 //app.use('/',subscribe);
+app.use('/', newblog);
 app.use('/', admin);
-
-// app.get('/*', function(req, res) {
-//     res.render('404');
-// })
 
 //now we listen to run our server with a port variable
 var port = 4000;

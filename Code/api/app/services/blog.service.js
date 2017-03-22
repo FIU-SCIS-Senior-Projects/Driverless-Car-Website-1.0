@@ -18,8 +18,23 @@ var BlogService = (function () {
         console.log('Blog Service Initialized...');
     }
     BlogService.prototype.getBlog = function () {
-        //return this.http.get('/blog')
         return this.http.get('/blog')
+            .map(function (res) { return res.json(); });
+    };
+    BlogService.prototype.addBlog = function (newBlog) {
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/blog', JSON.stringify(newBlog), { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    // deleteBlog(id){
+    //     return this.http.delete('/blog'+id)
+    //         .map(res => res.json());
+    // }
+    BlogService.prototype.updateBlog = function (blog) {
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.put('/blog' + blog._id, JSON.stringify(blog), { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return BlogService;

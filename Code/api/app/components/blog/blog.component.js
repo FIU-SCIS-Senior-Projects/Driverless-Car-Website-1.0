@@ -11,17 +11,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("../../services/blog.service");
+var router_1 = require("@angular/router");
 var BlogComponent = (function () {
-    //blogs: Array<any>;
-    function BlogComponent(blogService) {
+    function BlogComponent(blogService, _router) {
         var _this = this;
         this.blogService = blogService;
+        this._router = _router;
+        this.location = '';
         this.blogService.getBlog()
             .subscribe(function (blogs) {
             _this.blogs = blogs;
-            //console.log(blogs);
         });
+        this.location = _router.url;
     }
+    BlogComponent.prototype.redirect = function () {
+        this._router.navigate(['blog/newblog']);
+    };
+    BlogComponent.prototype.addBlog = function (event) {
+        var _this = this;
+        event.preventDefault();
+        var newBlog = {
+            title: this.title,
+            content: this.content
+        };
+        this.blogService.addBlog(newBlog)
+            .subscribe(function (blog) {
+            _this.blogs.push(blog);
+            _this.title = '';
+            _this.content = '';
+        });
+    };
+    // deleteBlog(id){
+    //     var blogs = this.blogs;
+    //     this.blogService.deleteBlog(id).subscribe(data => {
+    //         if(data.n == 1){
+    //             for(var i = 0;i < blogs.length;i++){
+    //                 if(blogs[i]._id == id){
+    //                     blogs.splice(i, 1);
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+    BlogComponent.prototype.updateBlog = function (blog) {
+        var _blog = {
+            _id: blog._id,
+            title: blog.title,
+            content: !blog.content
+        };
+        this.blogService.updateBlog(_blog).subscribe(function (data) {
+            blog.content = !blog.content;
+        });
+    };
     return BlogComponent;
 }());
 BlogComponent = __decorate([
@@ -32,7 +73,7 @@ BlogComponent = __decorate([
         styleUrls: ['blog.component.css'],
         providers: [blog_service_1.BlogService]
     }),
-    __metadata("design:paramtypes", [blog_service_1.BlogService])
+    __metadata("design:paramtypes", [blog_service_1.BlogService, router_1.Router])
 ], BlogComponent);
 exports.BlogComponent = BlogComponent;
 // import { Component } from '@angular/core';

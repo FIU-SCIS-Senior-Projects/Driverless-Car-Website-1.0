@@ -16,9 +16,6 @@ router.get('/blog', function(req,res,next){
         
     });
 });
-// router.get('/blog', function(req,res,next){
-//     res.render('index.html');
-// });
 
 //get single blog
 router.get('/blog/:id', function(req,res,next){
@@ -30,61 +27,42 @@ router.get('/blog/:id', function(req,res,next){
     });
 });
 
-//save blog
-router.post('/blog',function(req,res,next){
-    //get it from the form
-    var blog = req.body;
-    if(!blog.title|| (blog.content + '')){
-        res.status(400);
-        res.json({
-            "error": "Bad Data"
-        });
-    }else{
-        db.blogs.save(blog,function(err,blog){
-            if(err){
-                res.send(err);
-            }
-            res.json(blog);
-        });
-    }  
- });
+// //Delete blog
 
-//Delete blog
+// router.delete('/blog/:id',function(req,res,next){
+//     db.blogs.remove({_id: mongojs.ObjectId(req.params.id)},function(err,blog){
+//         if(err){
+//             res.send(err);
+//         }
+//         res.json(blog);
+//     });
+// });
 
-router.delete('/blog/:id',function(req,res,next){
-    db.blogs.remove({_id: mongojs.ObjectId(req.params.id)},function(err,blog){
-        if(err){
-            res.send(err);
-        }
-        res.json(blog);
-    });
-});
+// //update blog
+// router.put('/blog/:id',function(req,res,next){
+//     var blog = req.body;
+//     var updBlog = {};
 
-//update blog
-router.put('/blog/:id',function(req,res,next){
-    var blog = req.body;
-    var updBlog = {};
-
-    if(blog.content){
-        updBlog.content=blog.content;
-    }
-    if(blog.title){
-        updBlog.title=blog.title;
-    }
-    if(!updBlog){
-        res.status(400);
-        res.json({
-            "error": "Bad Data"
-        });
-    }else{
-        db.blogs.update({_id:mongojs.ObjectId(req.params.id)},updBlog,{},function(err,blog){
-            if(err){
-                res.send(err);
-            }
-            res.json(blog);
-        });
-    }
+//     if(blog.content){
+//         updBlog.content=blog.content;
+//     }
+//     if(blog.title){
+//         updBlog.title=blog.title;
+//     }
+//     if(!updBlog){
+//         res.status(400);
+//         res.json({
+//             "error": "Bad Data"
+//         });
+//     }else{
+//         db.blogs.update({_id:mongojs.ObjectId(req.params.id)},updBlog,{},function(err,blog){
+//             if(err){
+//                 res.send(err);
+//             }
+//             res.json(blog);
+//         });
+//     }
    
-});
+// });
 
 module.exports = router;
