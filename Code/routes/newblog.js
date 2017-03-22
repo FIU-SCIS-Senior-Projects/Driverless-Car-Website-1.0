@@ -5,27 +5,25 @@ var mongojs =  require('mongojs');
 //for cloud connection(mlab) with credentials
 var db = mongojs('mongodb://admin:admin123@ds139959.mlab.com:39959/driverlesscar',['blogs'])
 
-// //get all blogs
-// router.get('blog', function(req,res,next){
-//     //gets all json file on the collection
-//     res.render('index.html');
-// });
-
 //save blog
-router.post('/blog', function(req, res, next){
-    var blog = req.body;
-    console.log(blog.title);
-    if(!blog.title || !(blog.content + '')){
+router.post('/blog/newblog', function(req, res, next){
+    var newblog = req.body;
+
+    //display data of blog added
+    console.log("title: "+newblog.title);
+    console.log("content: "+newblog.content);
+
+    if(!newblog.title || !(newblog.content + '')){
         res.status(400);
         res.json({
             "error": "Bad Data"
         });
     } else {
-        db.blogs.save(blog, function(err, blog){
+        db.blogs.save(newblog, function(err, newblog){
             if(err){
                 res.send(err);
             }
-            res.json(blog);
+            res.json(newblog);
         });
     }
 });

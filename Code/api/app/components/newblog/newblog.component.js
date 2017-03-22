@@ -10,16 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
 var blog_service_1 = require("../../services/blog.service");
 var NewBlogComponent = (function () {
     function NewBlogComponent(blogService) {
         var _this = this;
         this.blogService = blogService;
-        this.blogForm = new forms_1.FormGroup({
-            title: new forms_1.FormControl(),
-            content: new forms_1.FormControl()
-        });
         this.blogService.getBlog()
             .subscribe(function (blogs) {
             _this.blogs = blogs;

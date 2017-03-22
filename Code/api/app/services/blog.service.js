@@ -24,17 +24,7 @@ var BlogService = (function () {
     BlogService.prototype.addBlog = function (newBlog) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('/blog', JSON.stringify(newBlog), { headers: headers })
-            .map(function (res) { return res.json(); });
-    };
-    // deleteBlog(id){
-    //     return this.http.delete('/blog'+id)
-    //         .map(res => res.json());
-    // }
-    BlogService.prototype.updateBlog = function (blog) {
-        var headers = new http_1.Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.put('/blog' + blog._id, JSON.stringify(blog), { headers: headers })
+        return this.http.post('http://localhost:4000/blog/newblog', JSON.stringify(newBlog), { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return BlogService;
@@ -44,33 +34,4 @@ BlogService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], BlogService);
 exports.BlogService = BlogService;
-// import {Injectable} from '@angular/core';
-// import {Http, Headers} from '@angular/http';
-// import 'rxjs/add/operator/map';
-// @Injectable()
-// export class BlogService{
-//     constructor(private http:Http){
-//         console.log('Blog Service Initialized...');
-//     }
-//     getBlog(){
-//         return this.http.get('/blog')
-//             .map(res => res.json());
-//     }
-//     addBlog(newBlog){
-//         var headers = new Headers();
-//         headers.append('Content-Type', 'application/json');
-//         return this.http.post('/blog', JSON.stringify(newBlog), {headers: headers})
-//             .map(res => res.json());
-//     }
-//     // deleteBlog(id){
-//     //     return this.http.delete('/blog'+id)
-//     //         .map(res => res.json());
-//     // }
-//     updateBlog(blog){
-//         var headers = new Headers();
-//         headers.append('Content-Type', 'application/json');
-//         return this.http.put('/blog'+blog._id, JSON.stringify(blog), {headers: headers})
-//             .map(res => res.json());
-//     }
-// } 
 //# sourceMappingURL=blog.service.js.map

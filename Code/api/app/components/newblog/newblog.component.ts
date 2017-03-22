@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {BlogService} from '../../services/blog.service';
 import {Blog} from '../../../Blog';
@@ -18,11 +17,6 @@ export class NewBlogComponent {
     blogs: Blog[];
     title: string;
     content: string;
-
-    blogForm = new FormGroup({
-        title: new FormControl(),
-        content: new FormControl()
-    });
 
 constructor(private blogService: BlogService){
         this.blogService.getBlog()
