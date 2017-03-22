@@ -16,6 +16,9 @@ var blog_component_1 = require("./components/blog/blog.component");
 var newblog_component_1 = require("./components/newblog/newblog.component");
 var blog_service_1 = require("./services/blog.service");
 //import { CommonModule } from '@angular/common';
+var app_config_1 = require("./app.config");
+var index_1 = require("./components/_guards/index");
+var index_2 = require("./components/_services/index");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,7 +28,10 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, app_routing_1.AppRoutingModule, http_1.HttpModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
         declarations: [app_component_1.AppComponent, app_routing_1.routingComponents, blog_component_1.BlogComponent, newblog_component_1.NewBlogComponent],
-        providers: [blog_service_1.BlogService],
+        providers: [blog_service_1.BlogService, index_1.AuthGuard, index_2.AlertService,
+            index_2.AuthenticationService,
+            index_2.UserService, index_2.UserService, app_config_1.AppConfig,
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

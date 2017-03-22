@@ -17,6 +17,13 @@ import { TechComponent } from './components/Technology/tech.component';
 import { AdminComponent } from './components/Admin/admin.component';
 import { NewBlogComponent } from './components/newblog/newblog.component';
 
+import { fakeBackendProvider } from './components/_helpers/fake-backend';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
+
+import { AuthGuard } from './components/_guards/index';
+import { AuthenticationService, UserService } from './components/_services/index';
+import { HComponent } from './components/afterlogin/index';
 export const routes: Routes = [
     {
         path: '',
@@ -57,7 +64,7 @@ export const routes: Routes = [
         path: 'blog/login',
         component: AdminComponent,
         pathMatch: 'full'
-    }, 
+    },
     {
         path: 'blog/newblog',
         component: NewBlogComponent,
@@ -75,4 +82,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [AppComponent, HomeComponent,
     NavbarComponent, VideoComponent, BrandComponent, ContactComponent,
-    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent,NewBlogComponent]
+    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent, NewBlogComponent, HComponent]

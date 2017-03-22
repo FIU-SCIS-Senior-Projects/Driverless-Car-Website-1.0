@@ -11,39 +11,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var index_1 = require("../_services/index");
 var AdminComponent = (function () {
-    function AdminComponent(route, router) {
+    function AdminComponent(route, router, authenticationService, alertService) {
         this.route = route;
         this.router = router;
+        this.authenticationService = authenticationService;
+        this.alertService = alertService;
         this.model = {};
         this.loading = false;
     }
     AdminComponent.prototype.ngOnInit = function () {
-        // this.authenticationService.logout();
-        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        // reset login status
+        this.authenticationService.logout();
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     };
     AdminComponent.prototype.login = function () {
-        // this.loading = true;
-        // this.authenticationService.login(this.model.username, this.model.password)
-        //     .subscribe(
-        //     data => {
-        //         this.router.navigate([this.returnUrl]);
-        //     },
-        //     error => {
-        //         this.alertService.error(error);
-        //         this.loading = false;
-        // });
+        var _this = this;
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(function (data) {
+            _this.router.navigate(['/blog']);
+        }, function (error) {
+            _this.alertService.error(error._body);
+            _this.loading = false;
+        });
     };
     return AdminComponent;
 }());
 AdminComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        // selector: 'admin-login',
         templateUrl: 'admin.component.html'
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
-        router_1.Router])
+        router_1.Router,
+        index_1.AuthenticationService,
+        index_1.AlertService])
 ], AdminComponent);
 exports.AdminComponent = AdminComponent;
 //# sourceMappingURL=admin.component.js.map
