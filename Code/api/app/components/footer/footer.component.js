@@ -17,7 +17,7 @@ var FooterComponent = (function () {
         this.location = '';
         this.location = _router.url;
     }
-    FooterComponent.prototype.redirect = function () {
+    FooterComponent.prototype.logout = function () {
         this._router.navigate(['/blog/login']);
     };
     return FooterComponent;

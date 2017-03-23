@@ -1,26 +1,26 @@
 var express = require('express');
 var router = express.Router();
-var mongojs =  require('mongojs');
+var mongojs = require('mongojs');
 
 //for cloud connection(mlab) with credentials
-var db = mongojs('mongodb://admin:admin123@ds139959.mlab.com:39959/driverlesscar',['blogs'])
+var db = mongojs('mongodb://admin:admin123@ds139959.mlab.com:39959/driverlesscar', ['blogs'])
 
 //get all blogs
-router.get('/blog', function(req,res,next){
+router.get('/blog', function(req, res, next) {
     //gets all json file on the collection
-    db.blogs.find(function(err,blogs){
-        if(err){
+    db.blogs.find(function(err, blogs) {
+        if (err) {
             res.send(err);
         }
         res.json(blogs);
-        
+
     });
 });
 
 //get single blog
-router.get('/blog/:id', function(req,res,next){
-    db.blogs.findOne({_id:mongojs.ObjectId(req.params.id)},function(err,blog){
-        if(err){
+router.get('/blog/:id', function(req, res, next) {
+    db.blogs.findOne({ _id: mongojs.ObjectId(req.params.id) }, function(err, blog) {
+        if (err) {
             res.send(err);
         }
         res.json(blog);
@@ -62,7 +62,7 @@ router.get('/blog/:id', function(req,res,next){
 //             res.json(blog);
 //         });
 //     }
-   
+
 // });
 
 module.exports = router;

@@ -1,21 +1,14 @@
-require('rootpath');
+require('rootpath')();
 var express = require('express');
 var path = require('path');
+var app = express();
+var cors = require('cors');
 var bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
-var session = require('express-session');
-var passport = require('passport');
 var expressJwt = require('express-jwt');
-var passport = require('passport');
-var bodyParser = require('body-parser');
+var config = require('config.json');
 
-
-var config = require('./config/main');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
 var mongojs = require('mongojs');
 var morgan = require('morgan');
-var User = require('./models/user');
 
 
 var index = require('./routes/index');
@@ -31,12 +24,7 @@ var admin = require('./routes/admin')
 
 //now we create our main
 var app = express();
-mongoose.connect(config.database);
-mongoose.Connection;
 
-require('./config/passport')(passport);
-
-app.set('SuperSecret', config.secret);
 // Add middleware to console log every request
 app.use(function(req, res, next) {
     console.log(req.method, req.url);
@@ -57,8 +45,8 @@ app.use(express.static(path.join(__dirname, 'api')));
 
 //this section sets the Body Parser Middleware
 app.use(morgan('dev'));
-app.use(passport.initialize());
-//app.use(cookieParser());
+
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
@@ -75,11 +63,8 @@ app.use(expressJwt({
         }
         return null;
     }
-}).unless({ path: ['/blog/login'] }));
+}).unless({ path: ['/api/authenticate'] }));
 
-// app.use('/success', passport.authenticate('jwt', { session: false }), function(req, res) {
-//     res.render('index.html');
-// });
 
 
 
