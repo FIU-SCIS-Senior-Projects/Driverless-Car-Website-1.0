@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("../../services/blog.service");
-//import { Router } from '@angular/router';
 var router_1 = require("@angular/router");
 var NewBlogComponent = (function () {
     function NewBlogComponent(blogService, route, router) {
@@ -24,6 +23,10 @@ var NewBlogComponent = (function () {
             _this.blogs = blogs;
         });
     }
+    NewBlogComponent.prototype.ngOnInit = function () {
+        // this.authenticationService.logout();
+        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    };
     NewBlogComponent.prototype.addBlog = function (event) {
         var _this = this;
         event.preventDefault();
