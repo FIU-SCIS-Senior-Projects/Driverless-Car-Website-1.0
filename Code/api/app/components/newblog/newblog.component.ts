@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { Blog } from '../../../Blog';
@@ -20,18 +20,18 @@ export class NewBlogComponent {
 
     constructor(private blogService: BlogService, private route: ActivatedRoute,
         private router: Router, ) {
-    
+
         this.blogService.getBlog()
             .subscribe(blogs => {
                 this.blogs = blogs;
             });
     }
-ngOnInit() {
+    ngOnInit() {
         // this.authenticationService.logout();
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
-addBlog(event){
+    addBlog(event) {
         event.preventDefault();
         var newblog = {
             title: this.title,
