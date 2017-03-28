@@ -22,6 +22,7 @@ var about_component_1 = require("./components/aboutus/about.component");
 var tech_component_1 = require("./components/Technology/tech.component");
 var admin_component_1 = require("./components/Admin/admin.component");
 var newblog_component_1 = require("./components/newblog/newblog.component");
+var subscription_component_1 = require("./components/subscription/subscription.component");
 var index_1 = require("./components/_guards/index");
 var index_2 = require("./components/afterlogin/index");
 exports.routes = [
@@ -65,6 +66,12 @@ exports.routes = [
         component: newblog_component_1.NewBlogComponent,
         canActivate: [index_1.AuthGuard]
     },
+    {
+        path: 'subscription',
+        component: subscription_component_1.SubscriptionComponent,
+        //canActivate: [AuthGuard]
+        pathMatch: 'full'
+    },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -80,5 +87,5 @@ AppRoutingModule = __decorate([
 exports.AppRoutingModule = AppRoutingModule;
 exports.routingComponents = [app_component_1.AppComponent, home_component_1.HomeComponent,
     navbar_component_1.NavbarComponent, video_component_1.VideoComponent, brand_component_1.BrandComponent, contact_component_1.ContactComponent,
-    footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent, prod_component_1.ProductComponent, about_component_1.AboutComponent, tech_component_1.TechComponent, admin_component_1.AdminComponent, newblog_component_1.NewBlogComponent, index_2.HComponent];
+    footer_component_1.FooterComponent, press_component_1.PressComponent, blog_component_1.BlogComponent, prod_component_1.ProductComponent, about_component_1.AboutComponent, tech_component_1.TechComponent, admin_component_1.AdminComponent, newblog_component_1.NewBlogComponent, index_2.HComponent, subscription_component_1.SubscriptionComponent];
 //# sourceMappingURL=app.routing.js.map

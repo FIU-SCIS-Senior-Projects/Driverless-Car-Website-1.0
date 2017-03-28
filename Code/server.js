@@ -18,7 +18,7 @@ var technology = require('./routes/technology');
 var contactus = require('./routes/contactus');
 var blog = require('./routes/blog');
 var newblog = require('./routes/newblog');
-var subscribe = require('./routes/subscribe');
+var subscription = require('./routes/subscription');
 //var favicon = require('serve-favicon');
 var admin = require('./routes/admin')
 
@@ -75,7 +75,7 @@ app.use('/', aboutus);
 app.use('/', technology);
 app.use('/', contactus);
 app.use('/', blog);
-//app.use('/',subscribe);
+app.use('/',subscription);
 app.use('/', newblog);
 app.use('/api', admin);
 

@@ -41,28 +41,6 @@ var BlogComponent = (function () {
             _this.content = '';
         });
     };
-    // deleteBlog(id){
-    //     var blogs = this.blogs;
-    //     this.blogService.deleteBlog(id).subscribe(data => {
-    //         if(data.n == 1){
-    //             for(var i = 0;i < blogs.length;i++){
-    //                 if(blogs[i]._id == id){
-    //                     blogs.splice(i, 1);
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }
-    BlogComponent.prototype.updateBlog = function (blog) {
-        var _blog = {
-            _id: blog._id,
-            title: blog.title,
-            content: !blog.content
-        };
-        this.blogService.updateBlog(_blog).subscribe(function (data) {
-            blog.content = !blog.content;
-        });
-    };
     return BlogComponent;
 }());
 BlogComponent = __decorate([

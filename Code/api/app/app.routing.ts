@@ -16,6 +16,7 @@ import { AboutComponent } from './components/aboutus/about.component';
 import { TechComponent } from './components/Technology/tech.component';
 import { AdminComponent } from './components/Admin/admin.component';
 import { NewBlogComponent } from './components/newblog/newblog.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 
 import { fakeBackendProvider } from './components/_helpers/fake-backend';
 import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -70,6 +71,12 @@ export const routes: Routes = [
         component: NewBlogComponent,
         canActivate: [AuthGuard]
     },
+      {
+        path: 'subscription',
+        component: SubscriptionComponent,
+        //canActivate: [AuthGuard]
+        pathMatch: 'full'
+    },
 
 ];
 
@@ -82,4 +89,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [AppComponent, HomeComponent,
     NavbarComponent, VideoComponent, BrandComponent, ContactComponent,
-    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent, NewBlogComponent, HComponent]
+    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent, NewBlogComponent, HComponent,SubscriptionComponent]

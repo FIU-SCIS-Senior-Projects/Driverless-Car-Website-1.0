@@ -7,9 +7,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogComponent } from './components/blog/blog.component';
 import { NewBlogComponent } from './components/newblog/newblog.component';
 import { BlogService } from './services/blog.service';
+
+import { SubscriptionService } from './services/subscription.service';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 //import { CommonModule } from '@angular/common';
 import { AppConfig } from './app.config';
-
 import { AlertComponent } from './components/_directives/index';
 
 
@@ -24,10 +26,10 @@ import { HComponent } from './components/afterlogin/index';
 
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
-    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent],
+    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent,SubscriptionComponent],
     providers: [BlogService, AuthGuard, AlertService,
         AuthenticationService,
-        UserService, UserService, AppConfig,
+        UserService, UserService, AppConfig,SubscriptionService
         // providers used to create fake backend
         // fakeBackendProvider,
         // MockBackend,

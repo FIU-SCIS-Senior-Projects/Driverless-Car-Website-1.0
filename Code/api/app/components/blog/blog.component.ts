@@ -61,17 +61,17 @@ export class BlogComponent {
     //     });
     // }
     
-    updateBlog(blog){
-        var _blog = {
-            _id:blog._id,
-            title: blog.title,
-            content: !blog.content
-        };
+    // updateBlog(blog){
+    //     var _blog = {
+    //         _id:blog._id,
+    //         title: blog.title,
+    //         content: !blog.content
+    //     };
         
-        this.blogService.updateBlog(_blog).subscribe(data => {
-            blog.content = !blog.content;
-        });
-    }
+    //     this.blogService.updateBlog(_blog).subscribe(data => {
+    //         blog.content = !blog.content;
+    //     });
+    // }
 
 }
 

@@ -15,6 +15,8 @@ var forms_1 = require("@angular/forms");
 var blog_component_1 = require("./components/blog/blog.component");
 var newblog_component_1 = require("./components/newblog/newblog.component");
 var blog_service_1 = require("./services/blog.service");
+var subscription_service_1 = require("./services/subscription.service");
+var subscription_component_1 = require("./components/subscription/subscription.component");
 //import { CommonModule } from '@angular/common';
 var app_config_1 = require("./app.config");
 var index_1 = require("./components/_guards/index");
@@ -27,10 +29,14 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, app_routing_1.AppRoutingModule, http_1.HttpModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, app_routing_1.routingComponents, blog_component_1.BlogComponent, newblog_component_1.NewBlogComponent],
+        declarations: [app_component_1.AppComponent, app_routing_1.routingComponents, blog_component_1.BlogComponent, newblog_component_1.NewBlogComponent, subscription_component_1.SubscriptionComponent],
         providers: [blog_service_1.BlogService, index_1.AuthGuard, index_2.AlertService,
             index_2.AuthenticationService,
-            index_2.UserService, index_2.UserService, app_config_1.AppConfig,
+            index_2.UserService, index_2.UserService, app_config_1.AppConfig, subscription_service_1.SubscriptionService
+            // providers used to create fake backend
+            // fakeBackendProvider,
+            // MockBackend,
+            // BaseRequestOptions
         ],
         bootstrap: [app_component_1.AppComponent]
     })
