@@ -12,6 +12,7 @@ export class AdminComponent implements OnInit {
     model: any = {};
     loading = false;
     returnUrl: string;
+    loggedin = false;
     //error = '';
     constructor(
         private route: ActivatedRoute,
@@ -33,6 +34,7 @@ export class AdminComponent implements OnInit {
             .subscribe(
             data => {
                 this.router.navigate(['/blog/newblog']);
+                this.loggedin = true;
             },
             error => {
                 //this.error = 'Username or password is incorrect';

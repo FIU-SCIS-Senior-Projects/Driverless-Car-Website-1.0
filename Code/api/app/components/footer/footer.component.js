@@ -11,12 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var index_1 = require("../Admin/index");
 var FooterComponent = (function () {
-    function FooterComponent(_router) {
+    function FooterComponent(_router, adminComponent) {
         this._router = _router;
+        this.adminComponent = adminComponent;
         this.location = '';
         this.location = _router.url;
     }
+    FooterComponent.prototype.fun = function () {
+        console.log('function called');
+        this.adminComponent.loggedin;
+        console.log(this.adminComponent.loggedin);
+    };
     FooterComponent.prototype.logout = function () {
         this._router.navigate(['/blog/login']);
     };
@@ -27,9 +34,10 @@ FooterComponent = __decorate([
         moduleId: module.id,
         selector: 'footer-app',
         templateUrl: 'footer.component.html',
-        styleUrls: ['footer.component.css']
+        styleUrls: ['footer.component.css'],
+        providers: [index_1.AdminComponent]
     }),
-    __metadata("design:paramtypes", [router_1.Router])
+    __metadata("design:paramtypes", [router_1.Router, index_1.AdminComponent])
 ], FooterComponent);
 exports.FooterComponent = FooterComponent;
 //# sourceMappingURL=footer.component.js.map

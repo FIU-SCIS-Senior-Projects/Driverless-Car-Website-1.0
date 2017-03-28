@@ -21,6 +21,7 @@ var AdminComponent = (function () {
         this.alertService = alertService;
         this.model = {};
         this.loading = false;
+        this.loggedin = false;
     }
     AdminComponent.prototype.ngOnInit = function () {
         // reset login status
@@ -34,6 +35,7 @@ var AdminComponent = (function () {
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(function (data) {
             _this.router.navigate(['/blog/newblog']);
+            _this.loggedin = true;
         }, function (error) {
             //this.error = 'Username or password is incorrect';
             _this.alertService.error(error);

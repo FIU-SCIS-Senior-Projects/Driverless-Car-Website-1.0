@@ -13,7 +13,7 @@ router.get('/contactus', function(req, res, next) {
     res.render('index.html');
 });
 
-router.post('contactus/send', function(req, res, next) {
+router.post('/contactus/send', function(req, res, next) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -22,23 +22,32 @@ router.post('contactus/send', function(req, res, next) {
         }
     });
     var data = req.body;
+    name = data.name;
+    email = data.email;
+    subject = data.subject;
+    message = data.message;
+
     var mailOptions = {
-        from: data.name + ' &lt;' + data.email + '&gt;', //sender address
+        from: name + ' &lt;' + email + '&gt;',
         to: 'driverlesscarinfo@gmail.com',
-        Subject: data.subject,
-        text: data.message
+        subject: subject,
+        text: "name: " + name + "\r\n" + "Email: " + email + "\r\n \r\n " + "Message:" + message
     };
 
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
             console.log(error);
-            // res.redirect('/');
+
         } else {
             console.log("Message Sent:" + info.response);
-            // res.redirect('/');
+
         }
+        transport.close();
         res.json(mailoptions);
     });
+
+    res.render('index.html');
+
 
 });
 
