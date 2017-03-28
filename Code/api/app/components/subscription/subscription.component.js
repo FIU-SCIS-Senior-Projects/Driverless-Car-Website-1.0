@@ -14,14 +14,10 @@ var subscription_service_1 = require("../../services/subscription.service");
 var router_1 = require("@angular/router");
 var SubscriptionComponent = (function () {
     function SubscriptionComponent(subscriptionService, route, router) {
-        var _this = this;
         this.subscriptionService = subscriptionService;
         this.route = route;
         this.router = router;
-        this.subscriptionService.getSubscription()
-            .subscribe(function (subscriptions) {
-            _this.subscriptions = subscriptions;
-        });
+        this.errorMessage = '';
     }
     SubscriptionComponent.prototype.addSubscription = function (event) {
         var _this = this;
@@ -31,10 +27,13 @@ var SubscriptionComponent = (function () {
             email: this.email
         };
         this.subscriptionService.addSubscription(subscription)
-            .subscribe(function (subscription) {
-            _this.subscriptions.push(subscription);
+            .subscribe(function (data) {
+            _this.subscriptions.push(data);
             _this.name = '';
             _this.email = '';
+            _this.router.navigate(['']);
+        }, function (error) {
+            _this.errorMessage = error;
             _this.router.navigate(['']);
         });
     };

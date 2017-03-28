@@ -12,15 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+//import { Constants } from './constants';
 var SubscriptionService = (function () {
     function SubscriptionService(http) {
         this.http = http;
         console.log('subscription Service Initialized...');
     }
-    SubscriptionService.prototype.getSubscription = function () {
-        return this.http.get('/subscription')
-            .map(function (res) { return res.json(); });
-    };
     SubscriptionService.prototype.addSubscription = function (subscribe) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
