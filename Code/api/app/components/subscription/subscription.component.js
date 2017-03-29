@@ -17,6 +17,7 @@ var SubscriptionComponent = (function () {
         this.subscriptionService = subscriptionService;
         this.route = route;
         this.router = router;
+        this.subscriptions = [];
         this.errorMessage = '';
     }
     SubscriptionComponent.prototype.addSubscription = function (event) {

@@ -47,8 +47,7 @@ export class ContactComponent {
                 this.errorMessage = <any>error
                 //console.log(this.errorMessage);
                 this.router.navigate(['']);
-            }
-            );
+            });
 
     }
 

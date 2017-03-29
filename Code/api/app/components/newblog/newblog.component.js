@@ -12,6 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("../../services/blog.service");
 var router_1 = require("@angular/router");
+// multer is the node package that lets you get files from a form
+// import * as multer from 'multer';
+// import * as fs from 'fs';
+// import * as request from 'request';
+// import * as Jimp from 'jimp';
+// let indexRouter = express.Router();
 var NewBlogComponent = (function () {
     function NewBlogComponent(blogService, route, router) {
         var _this = this;

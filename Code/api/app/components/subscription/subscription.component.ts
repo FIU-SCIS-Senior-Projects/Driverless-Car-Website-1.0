@@ -14,7 +14,7 @@ import { Subscription } from '../../../Subscription';
 })
 
 export class SubscriptionComponent {
-    subscriptions: Subscription[];
+    subscriptions:Subscription[] = [];
     name: string;
     email: string;
     errorMessage = '';
