@@ -5,7 +5,8 @@ import { AlertService } from '../_services/index';
 @Component({
     moduleId: module.id,
     selector: 'alert',
-    templateUrl: 'alert.component.html'
+    templateUrl: 'alert.component.html',
+    providers: [AlertService]
 })
 
 export class AlertComponent {

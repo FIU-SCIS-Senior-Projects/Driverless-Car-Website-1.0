@@ -26,12 +26,7 @@ export class ContactService {
         return this.http.post(this.config.apiUrl + '/contactus/send', JSON.stringify({ name: name, email: email, subject: subject, message: message }), { headers: headers })
             .map(res => res.json());
 
-
-
-
     }
-
-
 
 }
 

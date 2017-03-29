@@ -26,12 +26,18 @@ router.post('/authenticate', function(req, res) {
         if (err) throw err;
 
         if (!user) {
-            res.json({ success: false, message: 'Authentication failed. User not found.' });
+            res.json({
+                success: false,
+                message: 'Authentication failed. User not found.'
+            });
         } else if (user) {
 
             // check if password matches
             if (user.password != req.body.password) {
-                res.json({ success: false, message: 'Authentication failed. Wrong password.' });
+                res.json({
+                    success: false,
+                    message: 'Authentication failed. Wrong password.'
+                });
             } else {
 
                 // if user is found and password is right
@@ -61,7 +67,10 @@ router.use(function(req, res, next) {
     if (token) {
         jwt.verify(token, app.get(config.secret), function(err, decoded) {
             if (err) {
-                return res.json({ success: false, message: 'Failed to authenticate tocken' });
+                return res.json({
+                    success: false,
+                    message: 'Failed to authenticate tocken'
+                });
 
             } else {
                 req.decoded = decoded;
