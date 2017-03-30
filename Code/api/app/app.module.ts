@@ -24,9 +24,11 @@ import { AuthenticationService, AlertService, UserService } from './components/_
 // import { AdminComponent } from './components/Admin/index';
 import { HComponent } from './components/afterlogin/index';
 
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
-    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent,SubscriptionComponent],
+    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent,SubscriptionComponent,FileSelectDirective],
     providers: [BlogService, AuthGuard, AlertService,
         AuthenticationService,
         UserService, UserService, AppConfig,SubscriptionService

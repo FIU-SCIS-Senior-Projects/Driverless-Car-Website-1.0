@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { Blog } from '../../../Blog';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FileUploader } from 'ng2-file-upload';
 
 // multer is the node package that lets you get files from a form
 // import * as multer from 'multer';
@@ -53,6 +54,7 @@ export class NewBlogComponent {
                 this.router.navigate(['/blog']);
             });
     }
+     public uploader:FileUploader = new FileUploader({url:'http://localhost:4000/blog/newblog'});
 
 //     // This will determine where to save the file(s)
 // let d = new Date();

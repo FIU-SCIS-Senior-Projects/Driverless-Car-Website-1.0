@@ -10,6 +10,19 @@ router.get('/blog/newblog', function(req, res) {
 });
 //save blog
 router.post('/blog/newblog', function(req, res, next) {
+    // console.log(req.body);
+	// console.log(req.files);
+	// res.json({success: true});
+    
+    // upload(req,res,function(err){
+    //         console.log(req.file);
+    //         if(err){
+    //              res.json({error_code:1,err_desc:err});
+    //              return;
+    //         }
+    //          res.json({error_code:0,err_desc:null});
+    //     });
+    
     var newblog = req.body;
 
     //display data of blog added
@@ -30,5 +43,4 @@ router.post('/blog/newblog', function(req, res, next) {
         });
     }
 });
-
 module.exports = router;
