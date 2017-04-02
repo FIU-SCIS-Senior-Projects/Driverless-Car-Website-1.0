@@ -9,10 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("./services/blog.service");
 var subscription_service_1 = require("./services/subscription.service");
-var ng2_file_upload_1 = require("ng2-file-upload");
 var AppComponent = (function () {
     function AppComponent() {
-        this.uploader = new ng2_file_upload_1.FileUploader({ url: 'http://localhost:4000/blog/newblog' });
     }
     return AppComponent;
 }());

@@ -26,14 +26,6 @@ var admin = require('./routes/admin');
 //now we create our main
 var app = express();
 
-// Add middleware to console log every request
-app.use(function(req, res, next) {
-    console.log(req.method, req.url);
-    res.header("Access-Control-Allow-Origin", "http://localhost:4001");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Credentials", true);
-    next();
-});
 
 //app.use(multer({dest:'./uploads/'}));
 
@@ -58,20 +50,29 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-///multers
-    var storage = multer.diskStorage({ //multers disk storage settings
-        destination: function (req, file, cb) {
-            cb(null, './uploads/');
-        },
-        filename: function (req, file, cb) {
-            var datetimestamp = Date.now();
-            cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
-        }
-    });
 
-    var upload = multer({ //multer settings
-                    storage: storage
-                }).single('file');
+// Add middleware to console log every request
+app.use(function(req, res, next) {
+    console.log(req.method, req.url);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+///multers
+    // var storage = multer.diskStorage({ //multers disk storage settings
+    //     destination: function (req, file, cb) {
+    //         cb(null, './uploads/');
+    //     },
+    //     filename: function (req, file, cb) {
+    //         var datetimestamp = Date.now();
+    //         cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
+    //     }
+    // });
+
+    // var upload = multer({ //multer settings
+    //                 storage: storage
+    //             }).single('file');
 
 app.use(expressJwt({
     secret: config.secret,
@@ -101,17 +102,17 @@ app.use('/', newblog);
 app.use('/api', admin);
 
 
- /** API path that will upload the files */
-    app.post('/blog/newblog', function(req, res) {
-        upload(req,res,function(err){
-            console.log(req.file);
-            if(err){
-                 res.json({error_code:1,err_desc:err});
-                 return;
-            }
-             res.json({error_code:0,err_desc:null});
-        });
-    });
+//  /** API path that will upload the files */
+//     app.post('/blog/newblog', function(req, res) {
+//         upload(req,res,function(err){
+//             console.log(req.file);
+//             if(err){
+//                  res.json({error_code:1,err_desc:err});
+//                  return;
+//             }
+//              res.json({error_code:0,err_desc:null});
+//         });
+//     });
 //now we listen to run our server with a port variable
 var port = 4000;
 

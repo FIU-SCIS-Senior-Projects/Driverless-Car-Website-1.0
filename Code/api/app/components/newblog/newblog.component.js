@@ -12,12 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var blog_service_1 = require("../../services/blog.service");
 var router_1 = require("@angular/router");
-// multer is the node package that lets you get files from a form
-// import * as multer from 'multer';
-// import * as fs from 'fs';
-// import * as request from 'request';
-// import * as Jimp from 'jimp';
-// let indexRouter = express.Router();
 var NewBlogComponent = (function () {
     function NewBlogComponent(blogService, route, router) {
         var _this = this;
@@ -30,21 +24,21 @@ var NewBlogComponent = (function () {
         });
     }
     NewBlogComponent.prototype.ngOnInit = function () {
-        // this.authenticationService.logout();
-        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     };
     NewBlogComponent.prototype.addBlog = function (event) {
         var _this = this;
         event.preventDefault();
         var newblog = {
             title: this.title,
-            content: this.content
+            content: this.content,
+            imageURL: this.imageURL
         };
         this.blogService.addBlog(newblog)
             .subscribe(function (blog) {
             _this.blogs.push(blog);
             _this.title = '';
             _this.content = '';
+            _this.imageURL = '';
             _this.router.navigate(['/blog']);
         });
     };

@@ -21,7 +21,6 @@ var subscription_component_1 = require("./components/subscription/subscription.c
 var app_config_1 = require("./app.config");
 var index_1 = require("./components/_guards/index");
 var index_2 = require("./components/_services/index");
-var ng2_file_upload_1 = require("ng2-file-upload");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,14 +29,10 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, app_routing_1.AppRoutingModule, http_1.HttpModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, app_routing_1.routingComponents, blog_component_1.BlogComponent, newblog_component_1.NewBlogComponent, subscription_component_1.SubscriptionComponent, ng2_file_upload_1.FileSelectDirective],
+        declarations: [app_component_1.AppComponent, app_routing_1.routingComponents, blog_component_1.BlogComponent, newblog_component_1.NewBlogComponent, subscription_component_1.SubscriptionComponent],
         providers: [blog_service_1.BlogService, index_1.AuthGuard, index_2.AlertService,
             index_2.AuthenticationService,
             index_2.UserService, index_2.UserService, app_config_1.AppConfig, subscription_service_1.SubscriptionService
-            // providers used to create fake backend
-            // fakeBackendProvider,
-            // MockBackend,
-            // BaseRequestOptions
         ],
         bootstrap: [app_component_1.AppComponent]
     })
