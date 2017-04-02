@@ -32,13 +32,15 @@ var BlogComponent = (function () {
         event.preventDefault();
         var newBlog = {
             title: this.title,
-            content: this.content
+            content: this.content,
+            imageURL: this.imageURL
         };
         this.blogService.addBlog(newBlog)
             .subscribe(function (blog) {
             _this.blogs.push(blog);
             _this.title = '';
             _this.content = '';
+            _this.imageURL = '';
         });
     };
     return BlogComponent;
@@ -54,58 +56,4 @@ BlogComponent = __decorate([
     __metadata("design:paramtypes", [blog_service_1.BlogService, router_1.Router])
 ], BlogComponent);
 exports.BlogComponent = BlogComponent;
-// import { Component } from '@angular/core';
-// import {BlogService} from '../../services/blog.service';
-// import {Blog} from '../../../Blog';
-// @Component({
-//   moduleId: module.id,
-//   selector: 'blog-app',
-//   templateUrl: 'blog.component.html'
-// })
-// export class BlogComponent { 
-//     blogs: Blog[];
-//     title: string;
-//     content: string;
-//     constructor(private blogService:BlogService){
-//         this.blogService.getBlog()
-//             .subscribe(blogs => {
-//                 this.blogs = blogs;
-//             });
-//     }
-//     addBlog(event){
-//         event.preventDefault();
-//         var newBlog = {
-//             title: this.title,
-//             content: this.content
-//         }
-//         this.blogService.addBlog(newBlog)
-//             .subscribe(blog => {
-//                 this.blogs.push(blog);
-//                 this.title = '';
-//                 this.content = '';
-//             });
-//     }
-//     // deleteBlog(id){
-//     //     var blogs = this.blogs;
-//     //     this.blogService.deleteBlog(id).subscribe(data => {
-//     //         if(data.n == 1){
-//     //             for(var i = 0;i < blogs.length;i++){
-//     //                 if(blogs[i]._id == id){
-//     //                     blogs.splice(i, 1);
-//     //                 }
-//     //             }
-//     //         }
-//     //     });
-//     // }
-//     updateBlog(blog){
-//         var _blog = {
-//             _id:blog._id,
-//             title: blog.title,
-//             content: !blog.content
-//         };
-//         this.blogService.updateBlog(_blog).subscribe(data => {
-//             blog.content = !blog.content;
-//         });
-//     }
-// }
 //# sourceMappingURL=blog.component.js.map

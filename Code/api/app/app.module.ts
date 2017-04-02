@@ -18,24 +18,17 @@ import { AlertComponent } from './components/_directives/index';
 import { fakeBackendProvider } from './components/_helpers/fake-backend';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
-
 import { AuthGuard } from './components/_guards/index';
 import { AuthenticationService, AlertService, UserService } from './components/_services/index';
 // import { AdminComponent } from './components/Admin/index';
 import { HComponent } from './components/afterlogin/index';
 
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
-
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
-    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent,SubscriptionComponent,FileSelectDirective],
+    declarations: [AppComponent, routingComponents, BlogComponent, NewBlogComponent,SubscriptionComponent],
     providers: [BlogService, AuthGuard, AlertService,
         AuthenticationService,
         UserService, UserService, AppConfig,SubscriptionService
-        // providers used to create fake backend
-        // fakeBackendProvider,
-        // MockBackend,
-        // BaseRequestOptions
 
     ],
 

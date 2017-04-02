@@ -1,34 +1,4 @@
-<!--<br><br><br><br><br>
-<div class="container-fluid">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="form-area">
-                    <br><br>
-                <div class="section-title">New Post</div>
-                <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" accept="image/gif, image/jpeg">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" type="content" id="content" name="content" placeholder="Your post here" maxlength="140" rows="7"></textarea>
-                    </div>
 
-                        <input type="file" id="image" name="image" required>
-
-                    <div class=text-center>
-                        <li>
-                        <button (click)="addBlog($event)" type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
-
-                        <button type="reset" id="reset" name="reset" class="btn btn-primary">Reset</button>
-
-                        </li>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div>-->
 <br><br><br><br><br>
 <div class="container-fluid">
     <div class="container">
@@ -44,9 +14,9 @@
                     <div class="form-group">
                         <textarea class="form-control" type="content" id="content" [(ngModel)]="content" name="content" placeholder="Your post here" maxlength="10000" rows="7"></textarea>
                     </div>
-                    <!--<input type="file" id="image" name="image" required>-->
-                    
-                        <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />                                  
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="imageURL" name="imageURL" class="form-control" placeholder="enter image url...">
+                    </div>
                     <div class=text-center>
                         <li>
                             <button (click)="addBlog($event)" type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
@@ -58,35 +28,3 @@
         </div>
     </div>
 </div>
-<br><br><br><br><br>
-<!--<div class="container-fluid">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="form-area">
-                    <br><br>
-                <div class="section-title">New Post</div>
-                    <form class="well" name="form" (ngSubmit)="f.form.valid && createblog()" #f="ngForm" novalidate>
-                        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !title.valid }">
-                            <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add title...">
-                            <div *ngIf="f.submitted && !title.valid" class="help-block">title is required</div>
-                        </div>
-                        <div class="form-group"[ngClass]="{ 'has-error': f.submitted && !content.valid }">
-                             <textarea class="form-control" type="content" id="content" name="content" placeholder="Your post here" maxlength="140" rows="7"></textarea>
-                            <div *ngIf="f.submitted && !content.valid" class="help-block">content is required</div>
-                        </div>
-                        <input type="file" id="image" name="image" required>
-
-                    <div class=text-center>
-                        <li>
-                        <button [disabled]="loading" (click)="addBlog($event)" type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
-
-                        <button type="reset" id="reset" name="reset" class="btn btn-primary">Reset</button>
-
-                        </li>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div>-->
