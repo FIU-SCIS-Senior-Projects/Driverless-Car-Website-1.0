@@ -6,7 +6,6 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config.json');
-var multer = require('multer');
 
 var mongojs = require('mongojs');
 var morgan = require('morgan');
@@ -25,9 +24,6 @@ var admin = require('./routes/admin');
 
 //now we create our main
 var app = express();
-
-
-//app.use(multer({dest:'./uploads/'}));
 
 //now we setup the view engine
 //we begin by letting our system know what folder we want to use for our views
@@ -59,21 +55,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-///multers
-    // var storage = multer.diskStorage({ //multers disk storage settings
-    //     destination: function (req, file, cb) {
-    //         cb(null, './uploads/');
-    //     },
-    //     filename: function (req, file, cb) {
-    //         var datetimestamp = Date.now();
-    //         cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
-    //     }
-    // });
-
-    // var upload = multer({ //multer settings
-    //                 storage: storage
-    //             }).single('file');
-
 app.use(expressJwt({
     secret: config.secret,
     credentialsRequired: false,
@@ -88,8 +69,6 @@ app.use(expressJwt({
 }).unless({ path: ['/api/authenticate'] }));
 
 
-
-
 //now we create our routes by associating paths with route files defined abouve
 app.use('/', index);
 app.use('/', product);
@@ -102,17 +81,6 @@ app.use('/', newblog);
 app.use('/api', admin);
 
 
-//  /** API path that will upload the files */
-//     app.post('/blog/newblog', function(req, res) {
-//         upload(req,res,function(err){
-//             console.log(req.file);
-//             if(err){
-//                  res.json({error_code:1,err_desc:err});
-//                  return;
-//             }
-//              res.json({error_code:0,err_desc:null});
-//         });
-//     });
 //now we listen to run our server with a port variable
 var port = 4000;
 
