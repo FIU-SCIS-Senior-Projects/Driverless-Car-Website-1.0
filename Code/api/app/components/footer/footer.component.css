@@ -97,6 +97,12 @@ footer .footer-blue-bg .footer-link {
     display: inline-block;
 }
 
+@media screen and (max-width: 1125px) and (min-width: 700px) {
+    .footer-blue-bg .footer-subscribe {
+        width: 60%;
+    }
+}
+
 .footer-blue-bg .footer-subscribe {
     width: 350px;
     float: right;
