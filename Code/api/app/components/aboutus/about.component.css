@@ -53,10 +53,10 @@ q:after{content:''}
 	width:100%;
 	padding:0 0 7px;
 	border-bottom:3px solid #000;
-	/*background:#000 url(../images/sep02.png) 0 100% repeat-x;*/
+	/*background:#000 url(../images/sep02.png) 0 100% repeat-x;
 
 
-}
+}*/
 .header-holder {
     margin: 0 auto;
     padding: 25px 0;
@@ -1227,6 +1227,7 @@ input[type="submit"]:hover {
     width: 25px;
     white-space: nowrap;
     float: right;
+    
 }
 .team-block .alignright .social-holder {
     float: left;
@@ -1237,6 +1238,7 @@ input[type="submit"]:hover {
     list-style: none;
     display: inline-block;
     vertical-align: middle;
+    background-color: black;
 }
 #main .team-block p {
     margin: 0 0 23px;
@@ -1269,6 +1271,11 @@ input[type="submit"]:hover {
     width: 25px;
 }
 
+.team-block .social .linkedin{
+	background:url(../images/bg-social4.png) 0 -111px no-repeat;
+    
+	height:20px;
+}
 /*.team-block .social .twitter{
 	background:url(../images/bg-social4.png) no-repeat;
 	height:20px;
@@ -2386,4 +2393,62 @@ input[type="submit"]:hover {
         background: url(../images/icons.png) -31px -27px no-repeat;
         background-size: 65px 33px;
     }
+}
+
+/*actual css */
+
+/*
+.team-block {
+    border-top: 2px solid #8f8d87;
+    padding: 0 0 72px;
+}
+.team-block .text-box {
+    overflow: hidden;
+    position: relative;
+}
+.team-block .alignleft .img-block {
+    float: left;
+    width: 47.3%;
+    margin: 4px 51px 0 0;
+}
+.team-block .alignright .img-block {
+    float: right;
+    width: 47.3%;
+    margin: 4px 0 0 51px;
+}
+.team-block .alignleft .img-box {
+    float: right;
+    margin: 0 0 0 43px;
+}
+.team-block .alignright .img-box {
+    float: left;
+    margin: 0 39px 0 0;
+}
+.team-block .alignright .text-box {
+    text-align: right;
+}
+.team-block .alignleft .text-box {
+    text-align: left;
+}
+
+.main-holder {
+    max-width: 999px;
+    margin: 0 auto;
+    padding: 36px 0 47px;
+}
+.intro {
+    border-top: 2px solid #8f8d87;
+    padding: 27px 0 26px 2px;
+}*/
+
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  color: #424242;
+  margin-bottom: 0px;
+  text-transform: uppercase;
 }

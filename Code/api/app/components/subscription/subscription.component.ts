@@ -36,6 +36,7 @@ export class SubscriptionComponent {
                 this.subscriptions.push(data);
                 this.name = '';
                 this.email = '';
+                alert("You are now subscribe!");
                 this.router.navigate(['']);
             },
             error => {
@@ -43,4 +44,5 @@ export class SubscriptionComponent {
                 this.router.navigate(['']);
             });
     }
+
 }
