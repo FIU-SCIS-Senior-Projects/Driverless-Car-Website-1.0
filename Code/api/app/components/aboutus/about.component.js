@@ -12,7 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AboutComponent = (function () {
     function AboutComponent() {
-        this.fullVideoPath = 'images/nathally.jpg';
+        this.fullImagePath = 'images/aboutus/nathally.jpg';
+        this.fullImagePath2 = 'images/aboutus/mariana.jpg';
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
