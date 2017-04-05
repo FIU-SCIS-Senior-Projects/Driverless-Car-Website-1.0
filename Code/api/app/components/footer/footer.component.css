@@ -97,15 +97,16 @@ footer .footer-blue-bg .footer-link {
     display: inline-block;
 }
 
-@media screen and (max-width: 1125px) and (min-width: 700px) {
-    .footer-blue-bg .footer-subscribe {
-        width: 60%;
-    }
-}
+
 
 .footer-blue-bg .footer-subscribe {
     width: 350px;
     float: right;
+}
+@media screen and (max-width: 2560px) and (max-width: 1600px) {
+    .footer-blue-bg .footer-subscribe {
+        width: 250px;
+    }
 }
 
 .footer-blue-bg .footer-subscribe p {
@@ -121,6 +122,7 @@ footer .footer-blue-bg .footer-link {
     line-height: 22px;
     font-family: 'museo_300', helvetica, arial, sans-serif;
 }
+
 
 form {
     display: block;
