@@ -7,18 +7,16 @@ var db = mongojs('mongodb://admin:admin123@ds139959.mlab.com:39959/driverlesscar
 
 //get all blogs
 router.get('/blog', function(req, res, next) {
-    
     //gets all json file on the collection
     db.blogs.find(function(err, blogs) {
         if (err) {
             res.send(err);
         }
-       res.json(blogs);
+        res.json(blogs);
 
     });
-    
-});
 
+});
 
 //get single blog
 router.get('/blog/:id', function(req, res, next) {
