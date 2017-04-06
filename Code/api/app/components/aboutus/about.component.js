@@ -14,6 +14,8 @@ var AboutComponent = (function () {
     function AboutComponent() {
         this.fullImagePath = 'images/aboutus/nathally.jpg';
         this.fullImagePath2 = 'images/aboutus/mariana.jpg';
+        this.fullImagePath3 = 'images/aboutus/christopher.jpg';
+        
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
