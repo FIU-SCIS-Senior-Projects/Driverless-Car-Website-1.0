@@ -1,3 +1,4 @@
+
 .section-title h1 {
     font-size: 30px;
     text-align: center;
@@ -9,8 +10,11 @@
 }
 
 .container-fluid {
-    height: 200px;
+    /*height: 200px;*/
+    text-align: center;
     background-color: lightgray;
+    max-width: 100% !important;
+    height:auto;
 }
 
 .section-title {
@@ -33,13 +37,30 @@
     font-weight: bold;
 }
 
+/*@media only screen and (max-width: 2560px) and (max-width: 1600px)  {
+    .section-title_2  {
+        padding: 0px 0px 0px 0px ;
+    }
+}*/
 .sub-section {
-    display: inline-block;
+    /*display: inline-block;
     vertical-align: top;
     max-width: 275px;
     margin-right: 60px;
     padding-left: 80px;
+    padding-bottom: 60px;*/
+
+   display: inline-block;
+    vertical-align: top;
+    margin-right: 60px ;
+    padding-left: 80px;
     padding-bottom: 60px;
+}
+@media only screen and (max-width: 2560px) and (max-width: 1600px)  {
+    .sub-section  {
+        padding: 5px 0px 0px 70px ;
+        
+    }
 }
 
 .sub-section img {
@@ -55,4 +76,79 @@
     color: #424242;
     margin-bottom: 10px;
     text-transform: uppercase;
+}
+
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+
+.section {
+  text-align: center;
+  padding: 80px 20px;
+}
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  color: #424242;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.section-title h1{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  color: #424242;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.section .sub-section {
+  display: inline-block;
+  vertical-align: top;
+	max-width: 275px
+	
+}
+.sub-section-margin-right {
+  margin-right: 100px;
+}
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+.section {
+  text-align: center;
+  padding: 80px 20px;
+}
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  color: #424242;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.section-title h1{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  color: #424242;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.section .sub-section {
+  display: inline-block;
+  vertical-align: top;
+	max-width: 275px
+	
+}
+.sub-section-title {
+  font-size: 16px;
+  font-family: 'museo_300', helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #424242;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
