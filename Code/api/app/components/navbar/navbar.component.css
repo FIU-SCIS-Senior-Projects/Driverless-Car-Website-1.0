@@ -15,6 +15,10 @@
     padding: 20px 25px;
 }
 
+.navbar-right li:hover {
+    background-color: 477484;
+}
+
 .navbar-brand {
     font-family: 'museo_300', helvetica, arial, sans-serif;
     font-size: 30px;
