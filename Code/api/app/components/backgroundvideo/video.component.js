@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var VideoComponent = (function () {
     function VideoComponent() {
         this.fullVideoPath = 'images/video/webvideov5-HD.mp4';
+        this.fullVideoPath3 = 'images/video/UnitySimDemo.mov';
     }
     VideoComponent.prototype.ngOnInit = function () {
     };

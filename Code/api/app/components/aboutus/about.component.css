@@ -10,10 +10,15 @@ textarea:focus, input:focus, select:focus {
   margin-bottom: 0px;
   text-transform: uppercase;
   
+  
 }
 .intro {
     border-top: 2px solid #8f8d87;
     padding: 27px 0 26px 2px;
+    
+}
+.team-block .box .alignright{
+    background-color: lightblue;
 }
 
 .team-block {
@@ -21,6 +26,8 @@ textarea:focus, input:focus, select:focus {
     padding: 0 0 72px;
     max-width: 100% !important;
     height:auto;
+    
+    
 }
 /*image round*/
 .team-block .img-box{
@@ -34,6 +41,7 @@ textarea:focus, input:focus, select:focus {
     border-top-right-radius: 132px;
     border-bottom-right-radius: 132px;
     border-bottom-left-radius: 132px;
+    
 }
 
 .team-block .box {
@@ -41,6 +49,8 @@ textarea:focus, input:focus, select:focus {
     position: relative;
     padding: 48px 30px 53px;
     border-bottom: 2px solid #8f8d87;
+    /*background-color: lightblue;*/
+    
 }
 .team-block .alignleft .img-block {
     float: left;
@@ -48,6 +58,7 @@ textarea:focus, input:focus, select:focus {
     margin: 4px 51px 0 0;
     max-width: 100% !important;
     height:auto;
+    
 }
 .team-block .alignright .img-block {
     float: right;
@@ -55,14 +66,18 @@ textarea:focus, input:focus, select:focus {
     margin: 4px 0 0 51px;
     max-width: 100% !important;
     height:auto;
+    
+    
 }
 .team-block .alignleft .img-box {
     float: right;
     margin: 0 0 0 43px;
+    
 }
 .team-block .alignright .img-box {
     float: left;
     margin: 0 39px 0 0;
+    
 }
 .team-block .alignright .social-holder,
 .team-block .alignleft .social-holder {
@@ -70,10 +85,12 @@ textarea:focus, input:focus, select:focus {
     width: 25px;
     white-space: nowrap;
     float: right;
+    
 
 }
 .team-block .alignright .social-holder {
     float: left;
+    
 }
 #main .team-block p {
     margin: 0 0 23px;
@@ -85,10 +102,13 @@ textarea:focus, input:focus, select:focus {
 }
 .team-block .alignright .text-box {
     text-align: right;
+    
 }
 .team-block .text-box {
     overflow: hidden;
     position: relative;
+    
+    
 }
 .team-block .text-box h1{
 font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
@@ -102,11 +122,13 @@ font-family: 'museo_300', Arial, Helvetica, sans-serif;
         padding: 36px 10px 51px;
         max-width: 100% !important;
         height:auto;
+        
     }
 }
   
     .team-block {
         border-width: 1px 0 0;
+        
     }
 
 
