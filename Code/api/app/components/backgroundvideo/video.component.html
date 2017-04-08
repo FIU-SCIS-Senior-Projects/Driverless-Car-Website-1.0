@@ -1,13 +1,12 @@
 <video loop autoplay="" width="100%">
-  <source [src]="fullVideoPath" type="video/mp4">
-Your browser does not support the video tag.
+    <source [src]="fullVideoPath" type="video/mp4"> Your browser does not support the video tag.
 </video>
 <!-- Play full video section begins here-->
 <div class="position">
     <div>
-        <form>
-            <button formaction="images/video/webvideov5-HD.mp4" class="btn2" style="color:white"> WATCH VIDEO <a class="fa fa-angle-right" href="#"></a></button>
-
-        </form>
+        <button class="btn2" style="color:white" (click)="toggleVideo()"> WATCH VIDEO <a class="fa fa-angle-right"></a></button>
     </div>
+    <!--<video #videoPlayer>
+        <source src="{{fullVideoPath}}" type="video/mp4" /> browser not supported
+    </video>-->
 </div>

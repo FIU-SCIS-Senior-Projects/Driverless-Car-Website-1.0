@@ -1,4 +1,3 @@
-
 <section class="page-title parallax">
 
     <div class="row-parallax-bg">
@@ -28,21 +27,20 @@
 
 <!--Add blog button begins-->
 <br><br>
-        <div class="md-pull-right">
-            <button type="button" (click)="redirect()">Add New post</button>
-        </div>
+<div class="md-pull-right">
+    <button type="button" (click)="redirect()">Add New post</button>
+</div>
 
 <!--Add blog button begins-->
 
 <br><br>
-<div *ngFor = "let blog of blogs">
+<div *ngFor="let blog of blogs">
     <div class="middle-division">
         <div class="section-title">
-            <br>
-            {{blog.title}}
-            </div>
-        <img src= "{{blog.imageURL}}" width="450" height="450">
-        
+            <br> {{blog.title}}
+        </div>
+        <img src="{{blog.imageURL}}" width="450" height="450">
+
         <div style="text-align: justify;">
             <!--<div id="demo" class="collapse">-->
             {{blog.content}}
@@ -52,7 +50,7 @@
 
         <!--<h2 style="text-align:right; ">
             <a style="text-decoration:none; font-family:Roboto">Read More...</a>-->
-            <!--<a style="text-decoration:none; font-family:Roboto" href="#demo" data-toggle="collapse">Read More...</a>-->
+        <!--<a style="text-decoration:none; font-family:Roboto" href="#demo" data-toggle="collapse">Read More...</a>-->
         <!--</h2>
         <hr/>-->
 

@@ -24,7 +24,7 @@ import { BaseRequestOptions } from '@angular/http';
 
 import { AuthGuard } from './components/_guards/index';
 import { AuthenticationService, UserService } from './components/_services/index';
-import { HComponent } from './components/afterlogin/index';
+
 export const routes: Routes = [
     {
         path: '',
@@ -71,7 +71,7 @@ export const routes: Routes = [
         component: NewBlogComponent,
         canActivate: [AuthGuard]
     },
-      {
+    {
         path: 'subscription',
         component: SubscriptionComponent,
         //canActivate: [AuthGuard]
@@ -89,4 +89,4 @@ export class AppRoutingModule { }
 
 export const routingComponents = [AppComponent, HomeComponent,
     NavbarComponent, VideoComponent, BrandComponent, ContactComponent,
-    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent, NewBlogComponent, HComponent,SubscriptionComponent]
+    FooterComponent, PressComponent, BlogComponent, ProductComponent, AboutComponent, TechComponent, AdminComponent, NewBlogComponent, SubscriptionComponent]
