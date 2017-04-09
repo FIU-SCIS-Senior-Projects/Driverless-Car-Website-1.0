@@ -17,21 +17,32 @@ var AuthenticationService = (function () {
     function AuthenticationService(http, config) {
         this.http = http;
         this.config = config;
+        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.token = currentUser && currentUser.token;
     }
     AuthenticationService.prototype.login = function (username, password) {
+        var _this = this;
         return this.http.post(this.config.apiUrl + '/api/authenticate', { username: username, password: password })
             .map(function (response) {
             // login successful if there's a jwt token in the response
+            var token = response.json() && response.json().token;
             var user = response.json();
-            if (user && user.token) {
+            if (token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
+                _this.token = token;
                 localStorage.setItem('currentUser', JSON.stringify(user));
+                return true;
+            }
+            else {
+                return false;
             }
         });
     };
     AuthenticationService.prototype.logout = function () {
         // remove user from local storage to log user out
+        this.token = null;
         localStorage.removeItem('currentUser');
+        console.log('logged out');
     };
     return AuthenticationService;
 }());

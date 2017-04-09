@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
 import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'admin.component.html'
+    templateUrl: 'admin.component.html',
 })
 
 export class AdminComponent implements OnInit {
+
     model: any = {};
     loading = false;
     returnUrl: string;
     loggedin = false;
-    //error = '';
+    error = '';
+
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -33,13 +34,19 @@ export class AdminComponent implements OnInit {
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(
             data => {
-                this.router.navigate(['/blog/newblog']);
-                this.loggedin = true;
-            },
-            error => {
-                //this.error = 'Username or password is incorrect';
-                this.alertService.error(error);
-                this.loading = false;
+                if (data === true) {
+                    this.router.navigate(['/blog/newblog']);
+                    this.loggedin = true;
+                    console.log(this.loggedin);
+
+                } else {
+                    this.error = 'Username or password is incorrect';
+                    console.log(this.error);
+                    this.loading = false;
+                    this.loggedin = false;
+
+                }
+
             });
     }
 }

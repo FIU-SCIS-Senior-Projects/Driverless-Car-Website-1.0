@@ -13,7 +13,6 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var index_1 = require("../_services/index");
 var AdminComponent = (function () {
-    //error = '';
     function AdminComponent(route, router, authenticationService, alertService) {
         this.route = route;
         this.router = router;
@@ -22,6 +21,7 @@ var AdminComponent = (function () {
         this.model = {};
         this.loading = false;
         this.loggedin = false;
+        this.error = '';
     }
     AdminComponent.prototype.ngOnInit = function () {
         // reset login status
@@ -34,12 +34,17 @@ var AdminComponent = (function () {
         this.loading = true;
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(function (data) {
-            _this.router.navigate(['/blog/newblog']);
-            _this.loggedin = true;
-        }, function (error) {
-            //this.error = 'Username or password is incorrect';
-            _this.alertService.error(error);
-            _this.loading = false;
+            if (data === true) {
+                _this.router.navigate(['/blog/newblog']);
+                _this.loggedin = true;
+                console.log(_this.loggedin);
+            }
+            else {
+                _this.error = 'Username or password is incorrect';
+                console.log(_this.error);
+                _this.loading = false;
+                _this.loggedin = false;
+            }
         });
     };
     return AdminComponent;
@@ -47,7 +52,7 @@ var AdminComponent = (function () {
 AdminComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        templateUrl: 'admin.component.html'
+        templateUrl: 'admin.component.html',
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
         router_1.Router,
