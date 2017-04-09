@@ -12,11 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var VideoComponent = (function () {
     function VideoComponent() {
-        this.fullVideoPath = 'images/video/webvideov5-HD.mp4';
+        this.fullVideoPath = 'images/video/video2_background.mp4';
         this.fullVideoPath3 = 'images/video/UnitySimDemo.mp4';
     }
     VideoComponent.prototype.toggleVideo = function (event) {
-        window.open('images/video/UnitySimDemo.mp4', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+        window.open('images/video/video2_background.mp4', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
     };
     return VideoComponent;
 }());

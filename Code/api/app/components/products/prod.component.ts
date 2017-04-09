@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
     styleUrls: ['prod.component.css']
 })
 
-export class ProductComponent { }
+export class ProductComponent {
+    fullVideoPath: string;
+
+
+    constructor() {
+        this.fullVideoPath = 'images/video/video2_background.mp4'
+    }

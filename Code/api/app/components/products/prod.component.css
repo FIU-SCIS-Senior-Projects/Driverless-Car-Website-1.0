@@ -1,0 +1,17 @@
+h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.sub-section-title {
+    font-size: 16px;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: #424242;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
