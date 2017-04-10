@@ -12,10 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AboutComponent = (function () {
     function AboutComponent() {
-        this.fullImagePath = 'images/aboutus/nathally.jpg';
-        this.fullImagePath2 = 'images/aboutus/mariana.jpg';
-        this.fullImagePath3 = 'images/aboutus/christopher.jpg';
-        this.fullImagePath4 = 'images/aboutus/max.jpg';
+        this.fullImagePath = 'images/aboutus/nathally.png';
+        this.fullImagePath2 = 'images/aboutus/mariana.png';
+        this.fullImagePath3 = 'images/aboutus/christopher.png';
+        this.fullImagePath4 = 'images/aboutus/max.png';
+        this.fullImagePath5 = 'images/aboutus/mohsen.png';
+        this.fullImagePath6 = 'images/aboutus/kianoosh.png';
     }
     AboutComponent.prototype.ngOnInit = function () {
     };

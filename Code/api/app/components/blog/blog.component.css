@@ -10691,7 +10691,9 @@ div.left {
 div.middle-division {
     width: 50%;
     padding: 0 5%;
-    float: left
+    float: left;
+    max-width: 100% !important;
+    height:auto;
 }
 
 div.right {
