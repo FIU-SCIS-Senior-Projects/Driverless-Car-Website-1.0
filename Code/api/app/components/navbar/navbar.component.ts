@@ -10,19 +10,11 @@ import { Component, NgZone } from '@angular/core';
 
 export class NavbarComponent {
     private title: string;
-    isShrunk: boolean = false;
 
-    constructor(zone: NgZone) {
-        this.title = 'DriverlessCar';
-        window.onscroll = () => {
-            zone.run(() => {
-                if (window.pageYOffset > 0) {
-                    this.isShrunk = true;
-                } else {
-                    this.isShrunk = false;
-                }
-            });
-        }
+    constructor() {
+        this.title = 'SWIFAST';
+
     }
+
 
 }

@@ -11,20 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var NavbarComponent = (function () {
-    function NavbarComponent(zone) {
-        var _this = this;
-        this.isShrunk = false;
-        this.title = 'DriverlessCar';
-        window.onscroll = function () {
-            zone.run(function () {
-                if (window.pageYOffset > 0) {
-                    _this.isShrunk = true;
-                }
-                else {
-                    _this.isShrunk = false;
-                }
-            });
-        };
+    function NavbarComponent() {
+        this.title = 'SWIFAST';
     }
     return NavbarComponent;
 }());
@@ -35,7 +23,7 @@ NavbarComponent = __decorate([
         templateUrl: 'navbar.component.html',
         styleUrls: ['navbar.component.css']
     }),
-    __metadata("design:paramtypes", [core_1.NgZone])
+    __metadata("design:paramtypes", [])
 ], NavbarComponent);
 exports.NavbarComponent = NavbarComponent;
 //# sourceMappingURL=navbar.component.js.map
