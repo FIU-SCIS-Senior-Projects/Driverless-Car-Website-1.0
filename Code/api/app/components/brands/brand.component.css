@@ -12,8 +12,9 @@
     /*height: 200px;*/
     text-align: center;
     background-color: lightgray;
-    max-width: 100% !important;
-    height: auto;
+    /*max-width: 100% !important;*/
+    /*height: auto;*/
+    padding: 10px 10px;
 }
 
 .section-title {

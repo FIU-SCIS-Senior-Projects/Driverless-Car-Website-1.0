@@ -5,13 +5,12 @@
     color: #424242;
     text-transform: uppercase;
     top: -50px;
+    font-weight: bold;
 }
 
 .container-fluid {
     padding: 20px 20px;
-    /*height: auto;*/
     position: relative;
-    background-color: lightblue;
 }
 
 .col-sm-4 {

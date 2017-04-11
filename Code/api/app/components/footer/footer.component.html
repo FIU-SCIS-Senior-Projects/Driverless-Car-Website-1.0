@@ -65,7 +65,7 @@
                 <a href="">Privacy Policy</a>
                 <a href="">Terms and Conditions</a>
                 <!--<button type="button" *ngIf="_router.url.includes('blog')" (click)="redirect()">AdminLogin</button>-->
-                <button type="button" (click)="logout()">LogOut</button>
+                <button type="button" *ngIf="_router.url.includes('blog')" (click)="logout()">LogOut</button>
             </div>
         </div>
     </div>
