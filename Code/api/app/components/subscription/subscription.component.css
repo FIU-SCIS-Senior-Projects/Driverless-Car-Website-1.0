@@ -17,12 +17,15 @@ form {
 }
 
 ul {
+    list-style-type: none;
     width: 100px;
     float: left;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
-    width: 100%;
+    width: 200px;
     float: left;
     margin: 5px 0;
 }
@@ -56,12 +59,6 @@ input[type="submit"] {
     background: #00aeed;
     cursor: pointer;
     text-transform: uppercase;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 input,

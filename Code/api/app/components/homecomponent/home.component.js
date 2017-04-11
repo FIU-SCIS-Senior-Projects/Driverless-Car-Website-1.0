@@ -16,7 +16,8 @@ HomeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'home-app',
-        templateUrl: 'home.component.html'
+        templateUrl: 'home.component.html',
+        styleUrls: ['home.component.css']
     })
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;

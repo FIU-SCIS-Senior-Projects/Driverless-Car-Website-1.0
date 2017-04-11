@@ -1,8 +1,23 @@
-.section-title {
+.text-center {
     font-size: 30px;
     text-align: center;
     font-family: 'museo_300', helvetica, arial, sans-serif;
     color: #424242;
-    margin-bottom: 50px;
     text-transform: uppercase;
+    top: -50px;
+}
+
+.container-fluid {
+    padding: 20px 20px;
+    /*height: auto;*/
+    position: relative;
+    background-color: lightblue;
+}
+
+.col-sm-4 {
+    margin-left: 50px;
+}
+
+.row {
+    size: 50%;
 }
