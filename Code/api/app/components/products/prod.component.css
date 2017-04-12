@@ -3,8 +3,8 @@
     text-align: center;
     font-family: 'museo_300', helvetica, arial, sans-serif;
     color: #424242;
-    margin-bottom: 50px;
     text-transform: uppercase;
+    padding-bottom: 50px;
 }
 
 .section-title h1 {
@@ -219,16 +219,6 @@ p {
     display: block;
 }
 
-h5 {
-    display: block;
-    font-size: 0.83em;
-    -webkit-margin-before: 1.67em;
-    -webkit-margin-after: 1.67em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
-}
-
 #two {
     display: block;
 }
@@ -285,4 +275,33 @@ h5 {
 .text-content heading {
     font-weight: bold;
     font-size: 200%
+}
+
+.container-fluid {
+    background-color: lightgrey;
+}
+
+.heading {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    font-size: 25px;
+    display: block;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+video {
+    width: 80%;
+    margin-left: 50px;
+    padding: 20px 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #777777;
+    line-height: 1.66em;
+    text-align: justify;
 }
