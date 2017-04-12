@@ -1,5 +1,5 @@
 {
-  "name": "driverlesscar",
+  "name": "SWIFAST",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently \"tsc -w\" \"lite-server\" ",

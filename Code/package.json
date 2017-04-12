@@ -1,7 +1,7 @@
 {
   "name": "mean-app",
   "version": "1.0.0",
-  "description": "Driveless Car API",
+  "description": "SWIFAST",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

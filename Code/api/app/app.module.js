@@ -21,6 +21,8 @@ var subscription_component_1 = require("./components/subscription/subscription.c
 var app_config_1 = require("./app.config");
 var index_1 = require("./components/_guards/index");
 var index_2 = require("./components/_services/index");
+// import { AdminComponent } from './components/Admin/index';
+// import { HComponent } from './components/afterlogin/index';
 var AppModule = (function () {
     function AppModule() {
     }

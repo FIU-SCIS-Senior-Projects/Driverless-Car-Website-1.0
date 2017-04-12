@@ -13,28 +13,37 @@ textarea:focus, input:focus, select:focus {
   
 }
 .intro {
-    border-top: 2px solid #8f8d87;
+    /*border-top: 2px solid #8f8d87;*/
     background-image: url('http://www.helenmary.org/wp-content/uploads/2016/12/team_banner1.png');
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px 10px 0px 20px;
+    padding: 100px 10px 0px 20px;
 }
-
-.team-block .box .alignright{
-    background-color: lightblue;
-}
-
 .team-block {
-    /*border-top: 2px solid #8f8d87;*/
-    padding: 0 0 72px;
-    max-width: 100% !important;
+    padding: 0 0 2px;
+    margin-left: 15%;
+    margin-right: 15%;
     height:auto;
     
     
 }
-/*image round*/
+.team-block .box-right{
+    overflow: hidden;
+    position: relative;
+    padding: 5px 30px 5px;
+    margin-top: 5px;
+    background-color: lightgray;
+}
+.team-block .box-left{
+    overflow: hidden;
+    position: relative;
+    padding: 5px 30px 5px;
+    background-color: lightgray;
+    margin-top: 5px;
+    overflow: hidden;
+    
+}
 .team-block .img-box{
-    margin: 0 auto 34px;
     width: 264px;
     height: 264px;
     overflow: hidden;
@@ -47,15 +56,6 @@ textarea:focus, input:focus, select:focus {
     
 }
 
-.team-block .box {
-    overflow: hidden;
-    position: relative;
-    padding: 48px 30px 53px;
-    margin-left: -20px;
-    margin-right: -20px;
-    /*border-bottom: 2px solid #8f8d87;*/
-    
-}
 .team-block .alignleft .img-block {
     float: left;
     width: 47.3%;

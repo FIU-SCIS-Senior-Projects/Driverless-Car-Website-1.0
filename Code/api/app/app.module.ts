@@ -21,7 +21,7 @@ import { BaseRequestOptions } from '@angular/http';
 import { AuthGuard } from './components/_guards/index';
 import { AuthenticationService, AlertService, UserService } from './components/_services/index';
 // import { AdminComponent } from './components/Admin/index';
-import { HComponent } from './components/afterlogin/index';
+// import { HComponent } from './components/afterlogin/index';
 
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
