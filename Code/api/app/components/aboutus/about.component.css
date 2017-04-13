@@ -69,9 +69,7 @@ textarea:focus, input:focus, select:focus {
     width: 47.3%;
     margin: 4px 0 0 51px;
     max-width: 100% !important;
-    height:auto;
-    
-    
+    height:auto;   
 }
 .team-block .alignleft .img-box {
     float: right;
@@ -110,9 +108,7 @@ textarea:focus, input:focus, select:focus {
 }
 .team-block .text-box {
     overflow: hidden;
-    position: relative;
-    
-    
+    position: relative;    
 }
 .team-block .text-box h1{
 font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
@@ -123,16 +119,14 @@ font-family: 'museo_300', Arial, Helvetica, sans-serif;
 
 @media only screen and (max-width: 2560px) and (max-width: 1600px)  {
     .main-holder {
-        padding: 36px 10px 51px;
+        padding: 16px 10px 51px;
         max-width: 100% !important;
-        height:auto;
-        
+        height:auto;       
     }
 }
-  
-    .team-block {
+.team-block {
         border-width: 1px 0 0;
         
-    }
+}
 
 

@@ -4,7 +4,13 @@
     margin-top: -500px;
     padding-right: 300px;
     padding-left: 500px;
-    /*margin-left: 50px;*/
+}
+@media only screen and (max-width: 2560px) and (max-width: 1600px) {
+    .position {
+    padding-right: 100px;
+    padding-left: 100px;
+    text-align: center;
+    }
 }
 
 .btn2 {

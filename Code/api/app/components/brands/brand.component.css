@@ -9,22 +9,10 @@
 }
 
 .container-fluid {
-    /*height: 200px;*/
     text-align: center;
     background-color: lightgray;
-    /*max-width: 100% !important;*/
-    /*height: auto;*/
-    padding: 10px 10px;
 }
 
-.section-title {
-    font-size: 30px;
-    text-align: center;
-    font-family: 'museo_300', helvetica, arial, sans-serif;
-    color: #424242;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
 
 .section-title_2 {
     font-size: 30px;
@@ -33,24 +21,12 @@
     color: #424242;
     margin-bottom: 50px;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: -10px;
     font-weight: bold;
 }
 
 
-/*@media only screen and (max-width: 2560px) and (max-width: 1600px)  {
-    .section-title_2  {
-        padding: 0px 0px 0px 0px ;
-    }
-}*/
-
 .sub-section {
-    /*display: inline-block;
-    vertical-align: top;
-    max-width: 275px;
-    margin-right: 60px;
-    padding-left: 80px;
-    padding-bottom: 60px;*/
     display: inline-block;
     vertical-align: top;
     margin-right: 60px;
@@ -91,7 +67,6 @@ select:focus {
 }
 
 .section-title {
-    font-size: 30px;
     text-align: center;
     font-family: 'museo_300', helvetica, arial, sans-serif;
     color: #424242;
