@@ -179,6 +179,7 @@ h2{
     font-family: 'museo_300', helvetica, arial, sans-serif;
     color: #424242;
     /*margin-bottom: 50px;*/
+    line-height: 1.66em;
 }
 hr {
     margin: 16px auto;
