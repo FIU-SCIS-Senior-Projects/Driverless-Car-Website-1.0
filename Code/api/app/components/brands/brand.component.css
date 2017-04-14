@@ -79,3 +79,13 @@ input:focus,
 select:focus {
     outline: 0;
 }
+h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    /*font-family: 'museo_300', helvetica, arial, sans-serif;*/
+    /*font-weight: bold;*/
+    color: #424242;
+    text-transform: uppercase;
+    line-height: 2em
+}
