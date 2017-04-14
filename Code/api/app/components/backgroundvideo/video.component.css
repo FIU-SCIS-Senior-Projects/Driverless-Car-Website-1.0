@@ -4,12 +4,16 @@
     margin-top: -500px;
     padding-right: 300px;
     padding-left: 500px;
+    margin-right: auto;
+    margin-left: auto;
 }
 @media only screen and (max-width: 2560px) and (max-width: 1600px) {
     .position {
     padding-right: 100px;
     padding-left: 100px;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
     }
 }
 
@@ -37,11 +41,11 @@
 }
 
 video {
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
 }
 
 h1 {

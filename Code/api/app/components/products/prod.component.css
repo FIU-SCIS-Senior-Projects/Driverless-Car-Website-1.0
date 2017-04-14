@@ -16,12 +16,8 @@
 }
 
 #one {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
     position: relative;
-    overflow: hidden;
-    z-index: 10;
-    background-color: #fff;
     border-bottom: 1px solid #e8e8e8;
 }
 
@@ -30,25 +26,24 @@ section .container section .container {
     padding-right: 0;
 }
 
-section.parallax {
-    padding: 0;
-    background-color: transparent;
-    border: 0;
-}
 
 section.splash .parallax-overlay {
     background-color: transparent;
 }
 
 section.page-title {
-    height: 350px;
-    padding: 0;
+    height: 200px;
 }
 
 section.page-title .title h1 {
     font-size: 64px;
     margin-bottom: 20px;
     font-weight: 700;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    text-transform: uppercase;
+
 }
 
 .title {
@@ -64,16 +59,16 @@ section.page-title .title h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .row-parallax-bg .parallax-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
     width: 100%;
     height: 130%;
-    height: calc(100% + 30vh);
+    /*height: calc(100% + 30vh);*/
 }
 
 .row-parallax-bg .parallax-wrapper .parallax-bg-element {
@@ -87,45 +82,6 @@ section.page-title .title h1 {
     height: 100%;
     transition: all .3s ease;
 }
-
-.parallax-overlay {
-    position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-}
-
-
-/*.project {
-    max-width: 590px;
-    height: 270px;
-    width: 100%;
-    margin-bottom: 40px;
-    display: inline-block;
-}
-
-.project video {
-    height: 100%;
-}
-
-.project div.description {
-    max-width: 280px;
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
-    float: right;
-    margin-left: 50px;
-}
-
-p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}*/
 
 #layers-widget-column-286 {
     background-repeat: no-repeat;
@@ -283,19 +239,19 @@ p {
 
 .heading {
     text-align: center;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-family: 'museo_300', helvetica, arial, sans-serif;
     font-size: 25px;
     display: block;
     -webkit-margin-before: 1.67em;
-    -webkit-margin-after: 1.67em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    /*-webkit-margin-after: 1.67em;*/
+    /*-webkit-margin-start: 0px;*/
+    /*-webkit-margin-end: 0px;*/
 }
 
 video {
     width: 80%;
-    margin-left: 50px;
+    margin-left: 116px;
     padding: 20px 20px;
 }
 
@@ -304,4 +260,9 @@ p {
     color: #777777;
     line-height: 1.66em;
     text-align: justify;
+    margin: 0 0 20px;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+}
+.download{
+    text-align: center;
 }

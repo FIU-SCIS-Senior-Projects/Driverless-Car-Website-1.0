@@ -13,7 +13,9 @@ var core_1 = require("@angular/core");
 var AboutComponent = (function () {
     function AboutComponent() {
         this.fullImagePath = 'images/aboutus/nathally.png';
-        this.fullImagePath2 = 'images/aboutus/mariana.png';
+        this.fullImagePath2 = 'images/aboutus/mariana.jpg';
+        this.fullImagePath3 = 'images/aboutus/kianoosh.jpg';
+        this.fullImagePath4 = 'images/aboutus/mohsen.jpg';
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
