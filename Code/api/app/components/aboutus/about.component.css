@@ -1,19 +1,20 @@
-
+em{
+    text-align: left;
+}
 textarea:focus, input:focus, select:focus {
   outline: 0;
 }
 .section-title {
-  font-size: 30px;
-  text-align: center;
-  font-family: 'museo_300', helvetica, arial, sans-serif;
-  color: #424242;
-  margin-top: 100px;
-  text-transform: uppercase;
-  
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    text-transform: uppercase;
   
 }
 .intro {
-    /*border-top: 2px solid #8f8d87;*/
     background-image: url('http://www.helenmary.org/wp-content/uploads/2016/12/team_banner1.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -21,8 +22,8 @@ textarea:focus, input:focus, select:focus {
 }
 .team-block {
     padding: 0 0 2px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     height:auto;
     
     
@@ -35,9 +36,7 @@ textarea:focus, input:focus, select:focus {
     background-color: lightgray;
 }
 .team-block .box-left{
-    overflow: hidden;
     position: relative;
-    padding: 5px 30px 5px;
     background-color: lightgray;
     margin-top: 5px;
     overflow: hidden;
@@ -66,8 +65,6 @@ textarea:focus, input:focus, select:focus {
 }
 .team-block .alignright .img-block {
     float: right;
-    width: 47.3%;
-    margin: 4px 0 0 51px;
     max-width: 100% !important;
     height:auto;   
 }
@@ -78,13 +75,14 @@ textarea:focus, input:focus, select:focus {
 }
 .team-block .alignright .img-box {
     float: left;
-    margin: 0 39px 0 0;
+    margin: 60px 14px 10px 20px;
     
 }
 .team-block .alignright .social-holder,
 .team-block .alignleft .social-holder {
     height: 264px;
     width: 25px;
+    padding-top: 250;
     white-space: nowrap;
     float: right;
     
@@ -102,19 +100,19 @@ textarea:focus, input:focus, select:focus {
     margin: 0 0 28px;
     font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
 }
-.team-block .alignright .text-box {
-    text-align: right;
-    
-}
+
 .team-block .text-box {
     overflow: hidden;
     position: relative;    
+    margin-left: 10px;
 }
 .team-block .text-box h1{
 font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
 }
 .team-block .text-box p {
 font-family: 'museo_300', Arial, Helvetica, sans-serif;
+margin: 10px 1px;
+text-align: justify;
 }
 
 @media only screen and (max-width: 2560px) and (max-width: 1600px)  {
@@ -128,5 +126,4 @@ font-family: 'museo_300', Arial, Helvetica, sans-serif;
         border-width: 1px 0 0;
         
 }
-
 

@@ -7,17 +7,16 @@
 }
 .section {
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 20px 1px;
     background-color: lightgrey;
 }
 .section-title {
-    font-size: 30px;
+   font-size: 30px;
     text-align: center;
     font-family: 'museo_300', helvetica, arial, sans-serif;
     color: #424242;
-    margin-bottom: 50px;
+    margin-bottom: 20px; 
     text-transform: uppercase;
-    font-weight: bold;
 }
 .section .sub-section {
     display: inline-block;
@@ -33,13 +32,7 @@
     a:hover {
         text-decoration: none;
     } 
-    .section {
-        padding: 20px 20px;
-    }
-    .section-title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
+    
     .sub-section {
         margin-right: 0px !important;
         margin-top: 40px;
