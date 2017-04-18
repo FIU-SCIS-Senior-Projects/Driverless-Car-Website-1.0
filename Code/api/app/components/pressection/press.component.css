@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'museo_300';
+    src: url('https://s3.amazonaws.com/instantcab_static_images/ui/museo_300/Museo300-Regular-webfont.eot');
+    src: url('https://s3.amazonaws.com/instantcab_static_images/ui/museo_300/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('https://s3.amazonaws.com/instantcab_static_images/ui/museo_300/Museo300-Regular-webfont.woff') format('woff'), url('https://s3.amazonaws.com/instantcab_static_images/ui/museo_300/Museo300-Regular-webfont.ttf') format('truetype'), url('https://s3.amazonaws.com/instantcab_static_images/ui/museo_300/Museo300-Regular-webfont.svg#museo_300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.section {
+    text-align: center;
+    padding: 20px 20px 1px;
+    background-color: lightgrey;
+}
+.section-title {
+   font-size: 30px;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    margin-bottom: 20px; 
+    text-transform: uppercase;
+}
+.section .sub-section {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 275px
+}
+.fluid_container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+@media only screen and (max-width:1000px) {
+    a:hover {
+        text-decoration: none;
+    } 
+    
+    .sub-section {
+        margin-right: 0px !important;
+        margin-top: 40px;
+        display: block !important;
+        max-width: 100% !important;
+    }    
+}

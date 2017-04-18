@@ -1,0 +1,56 @@
+.position {
+    position: absolute;
+    width: 100%;
+    margin-top: -500px;
+    padding-right: 300px;
+    padding-left: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and (max-width: 2560px) and (max-width: 1600px) {
+    .position {
+    padding-right: 100px;
+    padding-left: 100px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    }
+}
+
+.btn2 {
+    width: 250px;
+    height: 70px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: 300px;
+}
+
+.btn2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+video {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+h1 {
+    color: white;
+    size: 40px;
+    line-height: 150%;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+}

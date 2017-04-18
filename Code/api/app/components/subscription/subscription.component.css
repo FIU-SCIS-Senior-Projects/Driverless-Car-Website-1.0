@@ -1,0 +1,71 @@
+p {
+    font-size: 13px;
+    color: #93d6f0;
+    padding: 0;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+}
+
+h2 {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+}
+
+form {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    width: 100px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    width: 200px;
+    float: left;
+    margin: 5px 0;
+}
+
+input[type="text"] {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 4px 8px 7px;
+    font-family: 'OpenSans';
+    font-size: 13px;
+    color: #93d6f0;
+    border: 1px solid #878d9b;
+    background: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    font-family: 'OpenSans-Semibold';
+    font-size: 14px;
+    color: #FFF;
+    display: inline-block;
+    line-height: 24px;
+    padding: 6px 30px;
+    margin: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #00aeed;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input,
+textarea,
+select,
+button,
+meter,
+progress {
+    -webkit-writing-mode: horizontal-tb;
+}

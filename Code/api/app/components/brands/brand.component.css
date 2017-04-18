@@ -1,0 +1,91 @@
+
+.container-fluid {
+    text-align: center;
+    background-color: lightgray;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container-fluid2 {
+    text-align: center;
+    padding-top:-50px; 
+    
+}
+
+.sub-section {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 2560px) and (max-width: 1600px) {
+    .sub-section {
+        padding: 5px 0px 0px 70px;
+    }
+}
+
+.sub-section img {
+    height: 70px;
+    margin: auto;
+    display: block;
+}
+
+.sub-section-title {
+    font-size: 16px;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    font-weight: bold;
+    color: #424242;
+    /*margin-bottom: 10px;*/
+    text-transform: uppercase;
+    line-height: 2em;
+  
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 0;
+}
+
+.section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.section-title {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    margin-top: 20px; 
+    margin-bottom: 0px; 
+    text-transform: uppercase;
+    
+}
+
+.section .sub-section {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 275px
+}
+
+.sub-section-margin-right {
+    margin-right: 100px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 0;
+}
+h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    /*font-family: 'museo_300', helvetica, arial, sans-serif;*/
+    /*font-weight: bold;*/
+    color: #424242;
+    text-transform: uppercase;
+    line-height: 2em
+}

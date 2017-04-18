@@ -1,0 +1,30 @@
+
+<br><br><br><br><br>
+<div class="container-fluid">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="form-area">
+                <br><br>
+                <div class="section-title">New Post</div>
+
+                <form class="well">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add title...">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" type="content" id="content" [(ngModel)]="content" name="content" placeholder="Your post here" maxlength="10000" rows="7"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="imageURL" name="imageURL" class="form-control" placeholder="Enter image url...">
+                    </div>
+                    <div class=text-center>
+                        <li>
+                            <button (click)="addBlog($event)" type="button" id="submit" name="submit" class="btn btn-primary">Create Post</button>
+                            <button type="reset" id="reset" name="reset" class="btn btn-primary">Reset</button>
+                        </li>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<section class="page-title parallax">
+
+    <div class="row-parallax-bg">
+        <div class="parallax-wrapper">
+            <div class="parallax-bg-element" style="background-image: url(images/staticmapbg.png);"></div>
+        </div>
+    </div>
+
+    <div class="parallax-overlay">
+        <div class="centrize">
+            <div class="v-center">
+                <div class="container">
+                    <div class="title center">
+                        <div class="section-title">
+                            <h1>Driverless Cars Blog<span class="red-dot"></span></h1>
+                        </div>
+                        <div class="container container--small">
+                            <div class="sub-section-title">Here you&#039;ll find some great tutorials and tips about driverless cars! </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Add blog button begins-->
+<br><br>
+<div class="md-pull-right">
+    <button type="button" (click)="redirect()">Add New post</button>
+</div>
+
+<!--Add blog button begins-->
+
+<br><br>
+<div *ngFor="let blog of blogs">
+    <div class="middle-division">
+        <div class="section-title">
+            <br> {{blog.title}}
+        </div>
+        <img  src="{{blog.imageURL}}"  >
+        
+        <!--<h2 style="text-align:right; ">
+            <a style="text-decoration:none; font-family:Roboto">Read More...</a>
+            <a style="text-decoration:none; font-family:Roboto"  data-toggle="collapse" href="#demo">Read More...</a>
+        </h2>
+        <hr/>
+        -->
+        <div style="text-align: justify;">
+            <!--<div id="demo" class="collapse">-->
+                <br>
+                <h2> {{blog.content}}</h2>
+                <br> <br>
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>

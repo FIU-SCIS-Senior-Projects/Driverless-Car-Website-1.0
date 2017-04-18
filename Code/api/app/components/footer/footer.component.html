@@ -1,0 +1,72 @@
+<footer>
+    <div class="footer-blue-bg">
+        <div class="wrapper">
+            <div class="footer-about-us">
+                <h2>SWIFAST.</h2>
+                <p> SWIFAST-Designing navigation software for autonomus vechicles</p>
+                <div class="follow-us-back">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-link">
+                <h2>PRODUCT</h2>
+                <ul>
+                    <li><a href="">Features</a></li>
+                    <li><a href="/technology">Technology</a></li>
+                    <li><a href="">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <h2>DEVELOPERS</h2>
+                <ul>
+                    <li><a href="">API Docs</a></li>
+                    <li><a href="/images/video/LeafletSimDemo.mp4">Demos</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h2>Subscribe</h2>
+                <p id="newsletterline">Get latest news & offeres in your inbox.</p>
+                <form action="" id="subscribe_form" method="post" accept-charset="utf-8" novalidate="novalidate">
+
+                    <subscription-app></subscription-app>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom-bg">
+        <div class="wrapper">
+            <p> Copyright © 2017 Driverless Car. All rights reserved </p>
+            <div class="two-link">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms and Conditions</a>
+                <!--<button type="button" *ngIf="_router.url.includes('blog')" (click)="redirect()">AdminLogin</button>-->
+                <button type="button" *ngIf="_router.url.includes('blog')" (click)="logout()">LogOut</button>
+            </div>
+        </div>
+    </div>
+</footer>
