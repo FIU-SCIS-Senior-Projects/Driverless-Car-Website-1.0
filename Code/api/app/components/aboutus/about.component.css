@@ -15,10 +15,11 @@ textarea:focus, input:focus, select:focus {
   
 }
 .intro {
-    background-image: url('http://www.helenmary.org/wp-content/uploads/2016/12/team_banner1.png');
+    /*background-image: url('http://thompsonlaw.co.uk/wp-content/uploads/post2.jpg');*/
+    background-image: url('images/team_banner1.png');
     background-repeat: no-repeat;
     background-position: center;
-    padding: 100px 10px 0px 20px;
+    padding: 200px 10px 0px 20px;
 }
 .team-block {
     padding: 0 0 2px;
