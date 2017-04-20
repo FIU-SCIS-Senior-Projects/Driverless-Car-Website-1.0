@@ -1,13 +1,41 @@
-<video loop autoplay="" width="100%">
-    <source [src]="fullVideoPath" type="video/mp4"> Your browser does not support the video tag.
-</video>
-<!-- Play full video section begins here-->
-<div class="position">
-    <div>
-        <h1> We design a navigation software for driverless cars to disperse traffic in the most beneficial way for society.</h1>
-        <!--<button class="btn2" style="color:white" (click)="toggleVideo()"> WATCH VIDEO <a class="fa fa-angle-right"></a></button>-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active first">
+            <video loop autoplay="">
+            <source [src]="fullVideoPath" type="video/mp4"> Your browser does not support the video tag.
+        </video>
+            <div class="carousel-caption">
+                <h3>SWIFAST</h3>
+                <br>
+                <p>NEXT GENERATION OF ADAPTIVE NAVIGATION SYSTEMS FOR DRIVERLESS CARS</p>
+            </div>
+        </div>
+
+        <div class="item second">
+            <video loop autoplay="">
+            <source [src]="fullVideoPath" type="video/mp4"> Your browser does not support the video tag.
+         </video>
+            <div class="carousel-caption">
+                <h3>SWIFAST</h3>
+                <p> NEXT GENERATION OF ADAPTIVE NAVIGATION SYSTEMS FOR DRIVERLESS CARS</p>
+                <br><br>
+                <p>WE DESIGN A NAVIGATION SOFTWARE FOR DRIVERLESS CARS BASED ON OBLIVIOUS NETWORK ROUTING TO DISPERSE TRAFFIC IN THE MOST BENEFICIAL WAY FOR SOCIETY</p>
+            </div>
+        </div>
     </div>
-    <!--<video #videoPlayer>
-        <source src="{{fullVideoPath}}" type="video/mp4" /> browser not supported
-    </video>-->
+    <!-- Left and right controls -->
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
