@@ -1,0 +1,21 @@
+.text-center {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    text-transform: uppercase;
+    margin-bottom: 20px; 
+}
+
+.container-fluid {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.col-sm-4 {
+    margin-left: 50px;
+}
+
+.row {
+    size: 50%;
+}

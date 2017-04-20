@@ -1,0 +1,48 @@
+@media only screen and (max-width: 2560px) and (max-width: 1600px) {
+    .position {
+        padding-right: 100px;
+        padding-left: 100px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.first video {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.carousel-inner>.item>video,
+.carousel-inner>.item>a>video {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+/*.carousel-caption h3 {
+    color: white;
+    size: 40px;
+    line-height: 150%;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    padding-bottom: 25px 25px;
+}*/
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+}
+
+p {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 50px;
+    letter-spacing: 8px;
+}

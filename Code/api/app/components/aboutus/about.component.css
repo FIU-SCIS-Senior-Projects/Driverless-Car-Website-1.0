@@ -1,0 +1,130 @@
+em{
+    text-align: left;
+}
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+.section-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'museo_300', helvetica, arial, sans-serif;
+    color: #424242;
+    text-transform: uppercase;
+  
+}
+.intro {
+    /*background-image: url('http://thompsonlaw.co.uk/wp-content/uploads/post2.jpg');*/
+    background-image: url('images/team_banner1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 200px 10px 0px 20px;
+}
+.team-block {
+    padding: 0 0 2px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height:auto;
+    
+    
+}
+.team-block .box-right{
+    overflow: hidden;
+    position: relative;
+    padding: 5px 30px 5px;
+    margin-top: 5px;
+    background-color: lightgray;
+}
+.team-block .box-left{
+    position: relative;
+    background-color: lightgray;
+    margin-top: 5px;
+    overflow: hidden;
+    
+}
+.team-block .img-box{
+    width: 264px;
+    height: 264px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border-top-left-radius: 132px;
+    border-top-right-radius: 132px;
+    border-bottom-right-radius: 132px;
+    border-bottom-left-radius: 132px;
+    
+}
+
+.team-block .alignleft .img-block {
+    float: left;
+    width: 47.3%;
+    margin: 4px 51px 0 0;
+    max-width: 100% !important;
+    height:auto;
+    
+}
+.team-block .alignright .img-block {
+    float: right;
+    max-width: 100% !important;
+    height:auto;   
+}
+.team-block .alignleft .img-box {
+    float: right;
+    margin: 0 0 0 43px;
+    
+}
+.team-block .alignright .img-box {
+    float: left;
+    margin: 60px 14px 10px 20px;
+    
+}
+.team-block .alignright .social-holder,
+.team-block .alignleft .social-holder {
+    height: 264px;
+    width: 25px;
+    padding-top: 250;
+    white-space: nowrap;
+    float: right;
+    
+
+}
+.team-block .alignright .social-holder {
+    float: left;
+    
+}
+#main .team-block p {
+    margin: 0 0 23px;
+}
+#main .team-block h1 {
+    text-transform: uppercase;
+    margin: 0 0 28px;
+    font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
+}
+
+.team-block .text-box {
+    overflow: hidden;
+    position: relative;    
+    margin-left: 10px;
+}
+.team-block .text-box h1{
+font: 27px/28px 'museo_300', Arial, Helvetica, sans-serif;
+}
+.team-block .text-box p {
+font-family: 'museo_300', Arial, Helvetica, sans-serif;
+margin: 10px 1px;
+text-align: justify;
+}
+
+@media only screen and (max-width: 2560px) and (max-width: 1600px)  {
+    .main-holder {
+        padding: 16px 10px 51px;
+        max-width: 100% !important;
+        height:auto;       
+    }
+}
+.team-block {
+        border-width: 1px 0 0;
+        
+}
+
