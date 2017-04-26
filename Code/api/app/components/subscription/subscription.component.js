@@ -32,7 +32,7 @@ var SubscriptionComponent = (function () {
             _this.subscriptions.push(data);
             _this.name = '';
             _this.email = '';
-            alert("You are now subscribe!");
+            alert("You are now subscribed!");
             _this.router.navigate(['']);
         }, function (error) {
             _this.errorMessage = error;

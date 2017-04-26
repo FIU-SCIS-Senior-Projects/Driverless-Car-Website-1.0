@@ -43,8 +43,17 @@
       font-size: 40px;
       letter-spacing: 0.1em;
   }
-
+@media only screen and (max-width:1147px){
+    p{
+        font-size: 1.0em;
+    }
+}
   h3 {
       font-size: 65px;
       letter-spacing: 0.2em;
   }
+  @media only screen and (max-width:1147px){
+    h3{
+        font-size: 1.2em;
+    }
+}

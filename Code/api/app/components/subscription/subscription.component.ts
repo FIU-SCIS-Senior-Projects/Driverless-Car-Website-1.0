@@ -36,7 +36,7 @@ export class SubscriptionComponent {
                 this.subscriptions.push(data);
                 this.name = '';
                 this.email = '';
-                alert("You are now subscribe!");
+                alert("You are now subscribed!");
                 this.router.navigate(['']);
             },
             error => {
